@@ -3,10 +3,51 @@ html {
   width: 100%;
 }
 
+body{
+  background-color: gray;
+}
+
 .letterBox{
   width: 30px;
   height: 30px;
   font-size: 20px;
   text-align: center;
   margin: 2px;
+}
+
+h1{
+  font-size: 50px;
+  text-align: center;
+}
+
+.colorBox{
+  border: 20px, dashed, black;
+  width: 30vw; 
+  height: 30vh;
+  place-self: center;
+}
+
+.answerBox{
+  place-self: center;
+}
+.button{
+  width: 80%;
+  height: 10%; 
+  margin-left: 10%;
+}
+
+.main{
+  /* border: 20px, dashed, palevioletred; */
+  width: 70%;
+  height: 100%;
+  
+  /* display: flex; */
+
+  align-items: center;
+  grid-template-columns: 10px, 10px, 10px;
+  grid-template-rows: 10px, 10px, 10px;
+
+  justify-self: center;
+  place-self: center;
+  
 }
