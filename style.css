@@ -1,0 +1,12 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+.letterBox{
+  width: 30px;
+  height: 30px;
+  font-size: 20px;
+  text-align: center;
+  margin: 2px;
+}
