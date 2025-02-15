@@ -206,6 +206,226 @@ const colors = [
   {
     "name":"Pyrrometheneoxazolone",
     "code":"#F20B0B",
+  },
+  {
+    "name":"orange red",
+    "code":"#FF4500"
+  },
+  {
+    "name":"pale golden rod",
+    "code":"#EEE8AA"
+  },
+  {
+    "name":"dark olive green",
+    "code":"#556B2F"
+  },
+  {
+    "name":"medium spring green",
+    "code":"#00FA9A"
+  },
+  {
+    "name":"medium slate blue",
+    "code":"#7B68EE"
+  },
+  {
+    "name":"midnight blue",
+    "code":"#191970"
+  },
+  {
+    "name":"medium orchid",
+    "code":"#BA55D3"
+  },
+  {
+    "name":"medium violet red",
+    "code":"#C71585"
+  },
+  {
+    "name":"pale violet red",
+    "code":"#DB7093"
+  },
+  {
+    "name":"blanched almond",
+    "code":"#FFEBCD"
+  },
+  {
+    "name":"light golden rod yellow",
+    "code":"#FAFAD2"
+  },
+  {
+    "name":"saddle brown",
+    "code":"#8B4513"
+  },
+  {
+    "name":"white smoke",
+    "code":"#F5F5F5"
+  },
+  {
+    "name":"burly wood",
+    "code":"#DEB887"
+  },
+  {
+    "name":"moccasin",
+    "code":"#FFE4B5"
+  },
+  {
+    "name":"navajo white",
+    "code":"#FFDEAD"
+  },
+  {
+    "name":"corn flower blue",
+    "code":"#6495ED"
+  },
+  {
+    "name":"dark salmon",
+    "code":"#E9967A"
+  },
+  {
+    "name":"light salmon",
+    "code":"#FFA07A"
+  },
+  {
+    "name":"salmon",
+    "code":"#FA8072"
+  },
+  {
+    "name":"Signal Blue",
+    "code":"#3E8EDE"
+  },
+  {
+    "name":"NYU Violet",
+    "code":"#57068c"
+  },
+  {
+    "name":"California Gold",
+    "code":"#c39e6d"
+  },
+  {
+    "name":"Glory Red",
+    "code":"#e31837"
+  },
+  {
+    "name":"Whitecaps Blue",
+    "code":"#9DC2EA"
+  },
+  {
+    "name":"Moss Green",
+    "code":"#EAE827"
+  },
+  {
+    "name":"University of Pennsylvania red",
+    "code":"#A50021"
+  },
+  {
+    "name":"International Klein Blue",
+    "code":"#130a8f"
+  },
+  {
+    "name":"Permanent Geranium Lake",
+    "code":"#E12C2C"
+  },
+  {
+    "name":"Faux-Medium aquamarine",
+    "code":"#55e19e"
+  },
+  {
+    "name":"Gin",
+    "code":"#d8e4bc"
+  },
+  {
+    "name":"Amaranth Deep Purple",
+    "code":"#9F2B68"
+  },
+  {
+    "name":"Quinacridone Magenta",
+    "code":"#8E3A59"
+  },
+  {
+    "name":"Permanent Alizarin Crimson",
+    "code":"#E32636"
+  },
+  {
+    "name":"Delphinium Blue",
+    "code":"#6198AE"
+  },
+  {
+    "name":"Maximum Green Yellow",
+    "code":"#D9E650"
+  },
+  {
+    "name":"Caput Mortuum Brown",
+    "code":"#592720"
+  },
+  {
+    "name":"Zinnwaldite Brown",
+    "code":"#2C1608"
+  },
+  {
+    "name":"Illuminating Emerald",
+    "code":"#319177"
+  },
+  {
+    "name":"Hollywood Cerise",
+    "code":"#F400A1"
+  },
+  {
+    "name":"Alabaster Gleam",
+    "code":"#F0DEBD"
+  },
+  {
+    "name":"Smaragdine",
+    "code":"#4A9976"
+  },
+  {
+    "name":"Gamboge",
+    "code":"#E49B0F"
+  },
+  {
+    "name":"Bastard-amber",
+    "code":"#FFCC88"
+  },
+  {
+    "name":"Arsenic",
+    "code":"#3B444B"
+  },
+  {
+    "name":"Exuberance",
+    "code":"#E86800"
+  },
+  {
+    "name":"Goose Turd Green",
+    "code":"#54FFA2"
+  },
+  {
+    "name":"Banan-appeal",
+    "code":"#FBF2B9"
+  },
+  {
+    "name":"Incarnadine",
+    "code":"#AA0022"
+  },
+  {
+    "name":"Elephant Breath",
+    "code":"#D3CABB"
+  },
+  {
+    "name":"Drunk Tank Pink",
+    "code":"#FF91AF"
+  },
+  {
+    "name":"Xanadu",
+    "code":"#738678"
+  },
+  {
+    "name":"Aureolin",
+    "code":"#FDEE00"
+  },
+  {
+    "name":"Skobeloff",
+    "code":"#007474"
+  },
+  {
+    "name":"Glaucous",
+    "code":"#6082B6"
   }
 ]
 
