@@ -8,9 +8,9 @@ body{
 }
 
 .letterBox{
-  width: 30px;
-  height: 30px;
-  font-size: 20px;
+  width: max(3vw, 3vh);
+  height: max(3vw, 3vh);
+  font-size: calc(max(3vw, 3vh) * .75);
   text-align: center;
   margin: 2px;
 }
@@ -29,11 +29,20 @@ h4{
   place-self: center;
 }
 .colorBoxBorder{
-  border: 20px, dashed, rgba(0, 0, 0, .7);
-  mix-blend-mode: multiply;
+  border: min(2vh, 2vw), dashed, rgba(255, 255, 255, 1);
+
+  box-shadow:
+  -5px -5px 0px -3px black, /* Top-left */
+  5px -5px 0px -3px black,  /* Top-right */
+  -5px 5px 0px -3px black,  /* Bottom-left */
+  5px 5px 0px -3px black;   /* Bottom-right */
+
+  mix-blend-mode: exclusion;
+
   width: 100%;
   height: 100%;
   z-index: 0;
+  
 
   box-sizing: border-box;
 }

@@ -873,7 +873,7 @@ function DrawWord(){
       answerBox.appendChild(br);
     }else{
       const box = document.createElement('letter-box');
-      if(revealedLetters.includes(letter)){
+      if(revealedLetters.includes(letter) || constReveals.includes(letter)){
         box.value = letter;
         box.disabled = true;
       }
