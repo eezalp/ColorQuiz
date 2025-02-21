@@ -426,8 +426,300 @@ const colors = [
   {
     "name":"Glaucous",
     "code":"#6082B6"
+  },
+  {
+    "name":"blue marguerite",
+    "code":"#8665C8"
+  },
+  {
+    "name":"bleached cedar",
+    "code":"#352442"
+  },
+  {
+    "name":"Japanese laurel",
+    "code":"#0E860E"
+  },
+  {
+    "name":"De York",
+    "code":"#82C082"
+  },
+  {
+    "name":"Hippie green",
+    "code":"#468647"
+  },
+  {
+    "name":"spicy mustard",
+    "code":"#6B5A0F"
+  },
+  {
+    "name":"Bronze olive",
+    "code":"#443909"
+  },
+  {
+    "name":"costa del sol",
+    "code":"#625932"
+  },
+  {
+    "name":"bossanova",
+    "code":"#4C3262"
+  },
+  {
+    "name":"we peep",
+    "code":"#F3CEF3"
+  },
+  {
+    "name":"Shady lady",
+    "code":"#ACAAAC"
+  },
+  {
+    "name":"light wisteria",
+    "code":"#D3ABE7"
+  },
+  {
+    "name":"night shadz",
+    "code":"#B43C55"
+  },
+  {
+    "name":"new york pink",
+    "code":"#D88387"
+  },
+  {
+    "name":"bulgarian rose",
+    "code":"#460709"
+  },
+  {
+    "name":"indian khaki",
+    "code":"#C1AE95"
+  },
+  {
+    "name":"rangitoto",
+    "code":"#323527"
+  },
+  {
+    "name":"rose bud cherry",
+    "code":"#6C0944"
+  },
+  {
+    "name":"zinnwaldite",
+    "code":"#EBC2AF"
+  },
+  {
+    "name":"Vivid tangerine",
+    "code":"#FF9980"
+  },
+  {
+    "name":"vis vis",
+    "code":"#FFEFA1"
+  },
+  {
+    "name":"tickle me pink",
+    "code":"#FC80A5"
+  },
+  {
+    "name":"texas",
+    "code":"#F8F99C"
+  },
+  {
+    "name":"te papa green",
+    "code":"#1E433C"
+  },
+  {
+    "name":"shiraz",
+    "code":"#B20913"
+  },
+  {
+    "name":"selective yellow",
+    "code":"#FFBA00"
+  },
+  {
+    "name":"Screamin' Green",
+    "code":"#66FF66"
+  },
+  {
+    "name":"Razzle dazzle rose",
+    "code":"#FF33CC"
+  },
+  {
+    "name":"Quarter spanish white",
+    "code":"#F7F2E1"
+  },
+  {
+    "name":"purple mountain's majesty",
+    "code":"#967882"
+  },
+  {
+    "name":"nutmeg wood finish",
+    "code":"#683600"
+  },
+  {
+    "name":"macaroni and cheese",
+    "code":"#FFB97B"
+  },
+  {
+    "name":"go ben",
+    "code":"#726D4E"
+  },
+  {
+    "name":"fuzzy wuzzy brown",
+    "code":"#C45655"
+  },
+  {
+    "name":"fresh eggplant",
+    "code":"#990066"
+  },
+  {
+    "name":"frangipani",
+    "code":"#FFDEB3"
+  },
+  {
+    "name":"forget me not",
+    "code":"#FFF1EE"
+  },
+  {
+    "name":"Ebb",
+    "code":"#E9E3E3"
+  },
+  {
+    "name":"double spanish white",
+    "code":"#E6D7B9"
+  },
+  {
+    "name":"double colonial white",
+    "code":"#EEE3AD"
+  },
+  {
+    "name":"double pearl lusta",
+    "code":"#FCF4D0"
+  },
+  {
+    "name":"hint of green",
+    "code":"#E6FFE9"
+  },
+  {
+    "name":"half and half",
+    "code":"#FFFEE1"
+  },
+  {
+    "name":"granny smith apple",
+    "code":"#9DE093"
+  },
+  {
+    "name":"amethyst smoke",
+    "code":"#A397B4"
+  },
+  {
+    "name":"alizarian crimson",
+    "code":"#E32636"
+  },
+  {
+    "name":"arrowtown",
+    "code":"#948771"
+  },
+  {
+    "name":"aromic tangerine",
+    "code":"#FF9966"
+  },
+  {
+    "name":"azure radiance",
+    "code":"#007FFF"
+  },
+  {
+    "name":"australian mint",
+    "code":"#F5FFBE"
+  },
+  {
+    "name":"Blue romance",
+    "code":"#D2F6DE"
+  },
+  {
+    "name":"can can",
+    "code":"#D591A4"
+  },
+  {
+    "name":"caribbean green",
+    "code":"#00CC99"
+  },
+  {
+    "name":"chathams blue",
+    "code":"#175579"
+  },
+  {
+    "name":"chelsea cucumber",
+    "code":"#83AA5D"
+  },
+  {
+    "name":"zambezi",
+    "code":"#685558"
+  },
+  {
+    "name":"waikawa gray",
+    "code":"#5A6E9C"
+  },
+  {
+    "name":"tyrian purple",
+    "code":"#66023C"
+  },
+  {
+    "name":"true V",
+    "code":"#8A73D6"
+  },
+  {
+    "name":"shocking pink",
+    "code":"#FC0FC0"
+  },
+  {
+    "name":"ylnmn blue",
+    "code":"#2E5090"
+  },
+  {
+    "name":"stil de grain yellow",
+    "code":"#FADA53"
+  },
+  {
+    "name":"honeysuckle",
+    "code":"#D94F70"
+  },
+  {
+    "name":"cadet gray",
+    "code":"#91A3B0"
+  },
+  {
+    "name":"british racing green",
+    "code":"#004225"
+  },
+  {
+    "name":"Viridian",
+    "code":"#009B7D"
+  },
+  {
+    "name":"Amaranth",
+    "code":"#E52B50"
+  },
+  {
+    "name":"coffee",
+    "code":"#A67B5B"
+  },
+  {
+    "name":"Della Robbia Blue Color",
+    "code":"#7a9dcb"
+  },
+  {
+    "name":"meadowbrook",
+    "code":"#60A0A3"
+  },
+  {
+    "name":"mediterranea",
+    "code":"#32575D"
+  },
+  {
+    "name":"tanager turquoise",
+    "code":"#91DCE8"
+  },
+  {
+    "name":"drab dark brown",
+    "code":"#4A412A"
   }
-]
+];
 
 let colorList = [];
 var questions = 0, correct = 0;
@@ -436,9 +728,16 @@ var colorDiv = null;
 var textBox = null;
 var answerBox = null;
 
-var revealedLetters = [' ', '-'];
+var constReveals = [' ', '-', '\'']
+var revealedLetters = [];
+var totalLetters = [];
 
 var textBoxes = [];
+
+var focusDirection = false; // false == backwards, true == forwards
+
+var nextKeys = ["ArrowRight", "Tab"]
+var prevKeys = ["ArrowLeft", "Backspace"]
 
 class LetterBox extends HTMLElement {
   constructor() {
@@ -462,11 +761,25 @@ class LetterBox extends HTMLElement {
   }
 
   FocusLast(){
-    let input = this.inputElement;
+    if(this.index == 0) return;
     textBoxes[this.index - 1].inputElement.focus();
+    focusDirection = false;
   }
   FocusNext(){
+    if(this.index >= (textBoxes.length - 1)) return;
     textBoxes[this.index + 1].inputElement.focus();
+    focusDirection = true;
+  }
+
+  OnFocus(){
+    if(this.inputElement.readOnly){
+      if(focusDirection)
+        this.FocusNext();
+      else
+        this.FocusLast();
+      return;
+    }     
+    // this.inputElement.select();
   }
 
   get value() {
@@ -486,6 +799,7 @@ class LetterBox extends HTMLElement {
     this.inputElement = input;
     if(this._value){
       input.value = this._value;
+      input.readOnly = true;
     }
 
     input.addEventListener('input', (e) => {
@@ -499,39 +813,49 @@ class LetterBox extends HTMLElement {
     });
 
     input.addEventListener('focus', () => {
-      if(this.disabled == true){
-        this.FocusNext();
-        return;
-      }     
-      input.select();
+      this.OnFocus();
     });
 
     input.addEventListener('keydown', (e) => {
-      if(e.key == "Backspace" && this.index != 0){
-        this.inputElement.value = "";
-        textBoxes[this.index - 1].inputElement.focus();
+      if(prevKeys.includes(e.key) && this.index != 0){
+        e.preventDefault()
+        if(e.key == "Backspace") this.inputElement.value = "";
+        this.FocusLast();
+      }else if(nextKeys.includes(e.key) && this.index != textBoxes.length){
+        e.preventDefault()
+        this.FocusNext();
       }else if(e.key == "Enter"){
         Check()
+      }else if(e.key.length == 1){
+        e.preventDefault()
+        this.inputElement.value = e.key;
+        this.FocusNext();
+      }
+    });
+    input.addEventListener('keyup', (e) => {
+      if(downKeys.has(e.key)){
+        downKeys.delete(e.key);
       }
     });
 
     if(this.index == 0){
-      this.inputElement.select();
+      focusDirection = true;
+      this.OnFocus();
+      this.inputElement.focus();
     }
   }
 };
 customElements.define('letter-box', LetterBox);
 
 function RevealLetter(){
-  if(curColor.name.length - revealedLetters.length <= 0){
+  if(totalLetters.length - revealedLetters.length <= 2){
     return;
   }
-  let reveal = curColor.name[Randrange(0, curColor.name.length)];
+  let reveal = totalLetters[Randrange(0, totalLetters.length)];
   while(revealedLetters.includes(reveal)){
-    reveal = curColor.name[Randrange(0, curColor.name.length)];
+    reveal = totalLetters[Randrange(0, totalLetters.length)];
   }
   revealedLetters.push(reveal);
-  console.log("revealedLetters: " + revealedLetters);
 }
 
 function DrawWord(){
@@ -539,11 +863,9 @@ function DrawWord(){
   while (child) {
     answerBox.removeChild(child);
     child = answerBox.lastElementChild;
-    console.log("Removed child")
   }
   textBoxes = [];
   RevealLetter();
-  // console.log("revealedLetters: " + revealedLetters);
   for (let i = 0; i < curColor.name.length; i++) {
     let letter = curColor.name[i]
     if(letter == ' '){
@@ -552,7 +874,6 @@ function DrawWord(){
     }else{
       const box = document.createElement('letter-box');
       if(revealedLetters.includes(letter)){
-        console.log("revealed letter")
         box.value = letter;
         box.disabled = true;
       }
@@ -567,21 +888,53 @@ function Randrange(min, max){
 
 function GenColor(){
   curColor = colorList[Randrange(0, colorList.length)]
-  // console.log(Randrange(0, colors.length))
-  console.log(`The color is ${curColor.name} hex:${curColor.code}`)
+  curColor.name = curColor.name.toLowerCase();
+
+  const bgCenter = "rgba(0, 0, 0, .3)";
+  document.body.style = `background-image: linear-gradient(.25turn, ${curColor.code}, ${bgCenter}, ${bgCenter}, ${curColor.code});`;
+
   colorDiv.style.backgroundColor = curColor.code;
-  revealedLetters = [' ', '-'];
+  revealedLetters = [];
+  totalLetters = [];
+
+  for(let i = 0; i < curColor.name.length; i++){
+    let char = curColor.name[i];
+    if(!totalLetters.includes(char) && !constReveals.includes(char)){
+      totalLetters.push(char);
+    }
+  }
   
   colorList = colorList.filter(element => element !== curColor);
   
   DrawWord();
+
+  document.getElementById("colorCount").innerHTML = `${colors.length-colorList.length}/${colors.length}`
 }
 
 function Start(){
   colorDiv = document.getElementById("colorBox")
   answerBox = document.getElementById("answerBox")
+  
   colorList = colors;
   GenColor()
+}
+
+function ButtonCheck(){
+  let text = "";
+  for(let i = 0; i < textBoxes.length; i++){
+    text += textBoxes[i].inputElement.value;
+  }
+  if(text.toLowerCase() == curColor.name.toLowerCase().replace(/\s+/g, '')){
+    correct++;
+    GenColor()
+  }else{
+    DrawWord()
+  }
+}
+
+function GiveUp(){
+  revealedLetters = totalLetters + constReveals;
+  DrawWord();
 }
 
 function Check(){
