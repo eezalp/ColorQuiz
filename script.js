@@ -873,7 +873,7 @@ function DrawWord(){
   for (let i = 0; i < curColor.name.length; i++) {
     let letter = curColor.name[i]
     document.getElementById("testBox").innerHTML += letter;
-    if(letter == ' '){
+    if("/\s/".test(letter)){
       const br = document.createElement('br');
       answerBox.appendChild(br);
     }else{
