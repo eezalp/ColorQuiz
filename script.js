@@ -309,7 +309,7 @@ const colors = [
   },
   {
     "name":"Moss Green",
-    "code":"#EAE827"
+    "code":"#4A5D23"
   },
   {
     "name":"University of Pennsylvania red",
@@ -734,6 +734,8 @@ var totalLetters = [];
 
 var textBoxes = [];
 
+var correct = 0, incorrect = 0;
+
 var focusDirection = false; // false == backwards, true == forwards
 
 var nextKeys = ["ArrowRight", "Tab"]
@@ -848,7 +850,7 @@ class LetterBox extends HTMLElement {
 customElements.define('letter-box', LetterBox);
 
 function RevealLetter(){
-  if(totalLetters.length - revealedLetters.length <= 2){
+  if(totalLetters.length - revealedLetters.length <= Math.max(2, Math.floor(totalLetters.length * .33))){
     return;
   }
   let reveal = totalLetters[Randrange(0, totalLetters.length)];
