@@ -16,8 +16,8 @@ body{
 }
 
 .spacingBox{
-  margin-left: max(1.5vw, 1.5vh);
-  margin-right: max(1.5vw, 1.5vh);
+  margin-left: max(.75vw, .75vh);
+  margin-right: max(.75vw, .75vh);
 }
 
 h1{
@@ -61,6 +61,8 @@ h4{
   flex-direction: row;
   justify-content: center;
   flex-grow: 0;
+
+  border: 3px solid purple;
 }
 .button{
   padding: 0px;
