@@ -871,6 +871,7 @@ function DrawWord(){
   RevealLetter();
   for (let i = 0; i < curColor.name.length; i++) {
     let letter = curColor.name[i]
+    console.log(letter);
     if(letter == ' '){
       const br = document.createElement('br');
       answerBox.appendChild(br);
