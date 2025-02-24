@@ -869,11 +869,14 @@ function DrawWord(){
   }
   textBoxes = [];
   RevealLetter();
+  document.getElementById("testBox").innerHTML = "";
   for (let i = 0; i < curColor.name.length; i++) {
     let letter = curColor.name[i]
     if(letter.trim() === ''){
-      const br = document.createElement('br');
+      const br = document.createElement('div');
+      br.classList.add("spacingBox")
       answerBox.appendChild(br);
+      document.getElementById("testBox").innerHtml += "<Space>";
     }else{
       const box = document.createElement('letter-box');
       if(revealedLetters.includes(letter) || constReveals.includes(letter)){
