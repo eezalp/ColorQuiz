@@ -5,6 +5,7 @@ html {
 
 body{
   background-color: rgb(100, 100, 100, 0);
+  justify-content: center;
 }
 
 .letterBox{
@@ -74,8 +75,8 @@ h4{
   margin: 0px;
 
   justify-self: center;
-  /* place-self: center; */
+  place-self: center;
 
-  background-color: rgba(0, 0, 0, 0.75);
+  background-color: rgba(0, 0, 0, 0.5);
   
 }
