@@ -16,10 +16,8 @@ body{
 }
 
 .spacingBox{
-  width: max(3vw, 3vh);
-  height: max(3vw, 3vh);
-  background-color: palegoldenrod;
-  margin: 2px;
+  margin-left: max(1.5vw, 1.5vh);
+  margin-right: max(1.5vw, 1.5vh);
 }
 
 h1{
