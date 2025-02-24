@@ -873,9 +873,9 @@ function DrawWord(){
   for (let i = 0; i < curColor.name.length; i++) {
     let letter = curColor.name[i]
     if(letter.trim() === '' || letter === " "){
-      document.getElementById("testBox").innerHtml += "<Space>";
-      const br = document.createElement('div');
-      br.classList.add("spacingBox")
+      document.getElementById("testBox").innerHTML += "<Space>";
+      const br = document.createElement('br');
+      // br.classList.add("spacingBox")
       answerBox.appendChild(br);
     }else{
       const box = document.createElement('letter-box');
