@@ -835,8 +835,8 @@ class LetterBox extends HTMLElement {
       }
     });
     input.addEventListener('keyup', (e) => {
-      if(downKeys.has(e.key)){
-        downKeys.delete(e.key);
+      if(prevKeys.has(e.key)){
+        prevKeys.delete(e.key);
       }
     });
 
@@ -850,7 +850,8 @@ class LetterBox extends HTMLElement {
 customElements.define('letter-box', LetterBox);
 
 function RevealLetter(){
-  if(totalLetters.length - revealedLetters.length <= Math.max(2, Math.floor(totalLetters.length * .33))){
+  console.log(Math.ceil(totalLetters.length * .33));
+  if(totalLetters.length - revealedLetters.length <= Math.max(2, Math.ceil(totalLetters.length * .33))){
     return;
   }
   let reveal = totalLetters[Randrange(0, totalLetters.length)];
