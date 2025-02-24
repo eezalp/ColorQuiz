@@ -869,7 +869,7 @@ function DrawWord(){
   }
   textBoxes = [];
   RevealLetter();
-  document.getElementById("testBox").innerHTML = "T";
+  document.getElementById("testBox").innerHTML = "";
   for (let i = 0; i < curColor.name.length; i++) {
     let letter = curColor.name[i]
     if(letter.trim() === '' || letter === " "){
