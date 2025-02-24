@@ -68,6 +68,11 @@ h4{
   margin: auto;
   padding-top: 1%;
 }
+br {
+  content: '\A';
+  display: contents;
+  white-space: pre;
+}
 
 .main{
   width: 70%;

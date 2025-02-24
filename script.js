@@ -869,10 +869,8 @@ function DrawWord(){
   }
   textBoxes = [];
   RevealLetter();
-  document.getElementById("testBox").innerHTML = "";
   for (let i = 0; i < curColor.name.length; i++) {
     let letter = curColor.name[i]
-    document.getElementById("testBox").innerHTML += letter;
     if(letter.trim() === ''){
       const br = document.createElement('br');
       answerBox.appendChild(br);
