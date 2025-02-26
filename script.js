@@ -734,12 +734,17 @@ var totalLetters = [];
 
 var textBoxes = [];
 
-var correct = 0, incorrect = 0;
+var correct = 0, incorrect = 0, lateCorrect = 0;
+var guesses = 0;
 
 var focusDirection = false; // false == backwards, true == forwards
 
 var nextKeys = ["ArrowRight", "Tab"]
 var prevKeys = ["ArrowLeft", "Backspace"]
+
+var startTime = null, finalTime = null;
+
+let timerInterval = setInterval(TimerChange, 10);
 
 class LetterBox extends HTMLElement {
   constructor() {
@@ -828,6 +833,8 @@ class LetterBox extends HTMLElement {
         this.FocusNext();
       }else if(e.key == "Enter"){
         Check()
+      }else if(e.key == "End"){
+        GiveUp();
       }else if(e.key.length == 1){
         e.preventDefault()
         this.inputElement.value = e.key;
@@ -849,6 +856,17 @@ class LetterBox extends HTMLElement {
 };
 customElements.define('letter-box', LetterBox);
 
+function FormatTime(diff) {
+  const minutes = String(Math.floor((diff / (1000 * 60)) % 60)).padStart(2, '0');
+  const seconds = String(Math.floor((diff / 1000) % 60)).padStart(2, '0');
+  const milliseconds = String(Math.floor((diff % 1000)/10)).padStart(2, '0');
+  return `${minutes}:${seconds}:${milliseconds}`;
+}
+function TimerChange() {
+  document.getElementById("timerBox").innerHTML = FormatTime(new Date() - startTime);
+  // console.log(new Date() - startTime);
+}
+
 function RevealLetter(){
   console.log(Math.ceil(totalLetters.length * .33));
   if(totalLetters.length - revealedLetters.length <= Math.max(2, Math.ceil(totalLetters.length * .33))){
@@ -869,11 +887,14 @@ function DrawWord(){
   }
   textBoxes = [];
   RevealLetter();
-  document.getElementById("testBox").innerHTML = "";
+  let word = document.createElement('div');
+  word.classList.add("wordBox");
   for (let i = 0; i < curColor.name.length; i++) {
     let letter = curColor.name[i]
     if(letter.trim() === '' || letter === " "){
-      document.getElementById("testBox").innerHTML += "<Space>";
+      answerBox.appendChild(word);
+      word = document.createElement('div');
+      word.classList.add("wordBox");
       const br = document.createElement('div');
       br.classList.add("spacingBox")
       answerBox.appendChild(br);
@@ -883,20 +904,40 @@ function DrawWord(){
         box.value = letter;
         box.disabled = true;
       }
-      answerBox.appendChild(box);
+      word.appendChild(box);
     }
   }
+  answerBox.appendChild(word);
 }
 
 function Randrange(min, max){
   return Math.round((Math.random() * (max - 1)) + min)
 }
 
+function EndGame(){
+  document.body.style = `background-image: linear-gradient(.25turn, #000000, #EEEEEE, #000000);`;
+  clearInterval(timerInterval);
+  document.getElementById("main").hidden = true;
+  document.getElementById("done").hidden = false;
+  finalTime = FormatTime(new Date() - startTime);
+  let percent = (correct/colors.length) * 100;
+
+  document.getElementById("incorrect").innerHTML = `You had ${incorrect} incorrect colors out of ${colors.length}`
+  document.getElementById("correct").innerHTML = `You had ${correct} incorrect colors out of ${colors.length}`
+  document.getElementById("summary").innerHTML = `You scored a %${percent.toFixed(2)} with a time of ${finalTime}`
+}
+
 function GenColor(){
+  const bgCenter = "rgba(0, 0, 0, .3)";
+  if(colorList.length == 0){
+    EndGame();
+    return;
+  }
+  guesses = 0;
+
   curColor = colorList[Randrange(0, colorList.length)]
   curColor.name = curColor.name.toLowerCase();
 
-  const bgCenter = "rgba(0, 0, 0, .3)";
   document.body.style = `background-image: linear-gradient(.25turn, ${curColor.code}, ${bgCenter}, ${bgCenter}, ${curColor.code});`;
 
   colorDiv.style.backgroundColor = curColor.code;
@@ -923,6 +964,8 @@ function Start(){
   
   colorList = colors;
   GenColor()
+
+  startTime = new Date();
 }
 
 function ButtonCheck(){
@@ -930,17 +973,20 @@ function ButtonCheck(){
   for(let i = 0; i < textBoxes.length; i++){
     text += textBoxes[i].inputElement.value;
   }
+  guesses++;
   if(text.toLowerCase() == curColor.name.toLowerCase().replace(/\s+/g, '')){
-    correct++;
-    GenColor()
+    if(guesses <= 6) correct++;
+    else incorrect++;
+    GenColor();
   }else{
-    DrawWord()
+    DrawWord();
   }
 }
 
 function GiveUp(){
   revealedLetters = totalLetters + constReveals;
   DrawWord();
+  guesses = 99;
 }
 
 function Check(){
@@ -953,8 +999,11 @@ function Check(){
     console.log(text.length)
     return;
   }
+  guesses++;
   if(text.toLowerCase() == curColor.name.toLowerCase().replace(/\s+/g, '')){
-    correct++;
+    if(guesses <= 6) correct++;
+    else if(guesses <= 15) lateCorrect++;
+    else incorrect++;
     GenColor()
   }else{
     DrawWord()

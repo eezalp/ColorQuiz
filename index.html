@@ -4,18 +4,26 @@
 
 <body onload="Start()">
   <script src="script.js"></script>
-  <div class="main">
-    <h1>What color is this?</h1>
-    <h1 id="testBox"></h1>
-    <h4 id="colorCount">0/300</h4>
-    <div id="colorBox" class="colorBox">
-      <div class="colorBoxBorder"></div>
+  <div class="background">
+    <div id="main" class="main">
+      <h1>What color is this?</h1>
+      <h2 id="timerBox"></h2>
+      <h4 id="colorCount">0/300</h4>
+      <div id="colorBox" class="colorBox">
+        <div class="colorBoxBorder"></div>
+      </div>
+      <br>
+      <div id="answerBox" class="answerBox"></div>
+      <div class="buttonBox">
+        <input type="button" value="Check" class="button" onclick="ButtonCheck()">
+        <input type="button" value="Give Up" class="button" onclick="GiveUp()">
+      </div>
     </div>
-    <br>
-    <div id="answerBox" class="answerBox"></div>
-    <div class="buttonBox">
-      <input type="button" value="Check" class="button" onclick="ButtonCheck()">
-      <input type="button" value="Give Up" class="button" onclick="GiveUp()">
+    <div id="done" class="done" hidden="true">
+      <h1>Results</h1>
+      <h3 id="incorrect" class="incorrect">You had 130 incorrect colors out of 180</h3>
+      <h3 id="correct" class="correct">You had 50 correct colors out of 180</h3>
+      <h2 id="summary">You got a 27.78% with a time of 98:23:20</h2>
     </div>
   </div>
 </body>

@@ -24,6 +24,12 @@ h1{
   font-size: 50px;
   text-align: center;
 }
+h2{
+  text-align: center;
+}
+h3{
+  font-size: 25px;
+}
 h4{
   font-size: 25px;
   text-align: center;
@@ -42,7 +48,7 @@ h4{
   -5px 5px 0px -3px black,  /* Bottom-left */
   5px 5px 0px -3px black;   /* Bottom-right */
 
-  mix-blend-mode: hue;
+  mix-blend-mode: difference;
 
   width: 100%;
   height: 100%;
@@ -52,16 +58,22 @@ h4{
   box-sizing: border-box;
 }
 
+.wordBox{
+  width: 1%;
+  display: flex;
+  height: max(3vw, 3vh);
+  margin: auto;
+  justify-content: center;
+}
+
 .answerBox{
   width: 70%;
   align-items: center;
   margin: auto;
   margin-top: 3vh;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
-  flex-grow: 0;
-  flex-shrink: 0;
 
   border: 3px solid purple;
 }
@@ -85,7 +97,7 @@ br {
 }
 
 .main{
-  width: 70%;
+  width: 100%;
   height: 100%;
   margin: auto;
 
@@ -94,7 +106,22 @@ br {
   grid-template-rows: 10px, 10px, 10px;
 
   box-sizing: border-box;
+}
+.done{
+  width: 70%;
+  height: 85%;
+  margin: auto;
+}
 
+.background{
+  margin: auto;
+  width: 80%;
+  height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
-  
+}
+.incorrect{
+  color: red;
+}
+.correct{
+  color: lime;
 }
