@@ -1015,8 +1015,10 @@ function Check(){
   guesses++;
   if(text.toLowerCase() == curColor.name.toLowerCase().replace(/\s+/g, '')){
     if(guesses <= 6) correct++;
-    else if(guesses <= 15) lateCorrect++;
-    else incorrect++;
+    else if(guesses <= 15){ 
+      lateCorrect++;
+      correct++;
+    }else incorrect++;
     GenColor()
   }else{
     DrawWord()
