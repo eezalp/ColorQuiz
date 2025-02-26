@@ -736,6 +736,7 @@ var textBoxes = [];
 
 var correct = 0, incorrect = 0, lateCorrect = 0;
 var guesses = 0;
+var totalQuestions = 0;
 
 var focusDirection = false; // false == backwards, true == forwards
 
@@ -929,7 +930,7 @@ function EndGame(){
 
 function GenColor(){
   const bgCenter = "rgba(0, 0, 0, .3)";
-  if(colorList.length == 0){
+  if(colorList.length == (colors.length - totalQuestions)){
     EndGame();
     return;
   }
@@ -958,14 +959,23 @@ function GenColor(){
   document.getElementById("colorCount").innerHTML = `${colors.length-colorList.length}/${colors.length}`
 }
 
-function Start(){
+function OnLoad(){
   colorDiv = document.getElementById("colorBox")
   answerBox = document.getElementById("answerBox")
-  
+}
+
+function Start(){
   colorList = colors;
+  totalQuestions = document.getElementById("qNum").value;
   GenColor()
 
+  document.getElementById("home").hidden = true;
+  document.getElementById("main").hidden = false;
   startTime = new Date();
+}
+function ToHome(){
+  document.getElementById("home").hidden = false;
+  document.getElementById("done").hidden = true;
 }
 
 function ButtonCheck(){

@@ -2,10 +2,14 @@
   <link rel="stylesheet" href="style.css">
 </head>
 
-<body onload="Start()">
+<body onload="OnLoad()">
   <script src="script.js"></script>
   <div class="background">
-    <div id="main" class="main">
+    <div id="home" class="home">
+      <input id="qNum" class="qNum" type="number" value="180">
+      <button class="startBut" onclick="Start()">Start</button>
+    </div>
+    <div id="main" class="main" hidden="true">
       <h1>What color is this?</h1>
       <h2 id="timerBox"></h2>
       <h4 id="colorCount">0/300</h4>
