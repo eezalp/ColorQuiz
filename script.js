@@ -921,10 +921,10 @@ function EndGame(){
   document.getElementById("main").hidden = true;
   document.getElementById("done").hidden = false;
   finalTime = FormatTime(new Date() - startTime);
-  let percent = (correct/colors.length) * 100;
+  let percent = (correct/totalQuestions) * 100;
 
-  document.getElementById("incorrect").innerHTML = `You had ${incorrect} incorrect colors out of ${colors.length}`
-  document.getElementById("correct").innerHTML = `You had ${correct} incorrect colors out of ${colors.length}`
+  document.getElementById("incorrect").innerHTML = `You had ${incorrect} incorrect colors out of ${totalQuestions}`
+  document.getElementById("correct").innerHTML = `You had ${correct} incorrect colors out of ${totalQuestions}`
   document.getElementById("summary").innerHTML = `You scored a %${percent.toFixed(2)} with a time of ${finalTime}`
 }
 
