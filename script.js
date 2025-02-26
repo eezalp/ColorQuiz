@@ -966,6 +966,9 @@ function OnLoad(){
 
 function Start(){
   colorList = colors;
+  correct = 0; 
+  incorrect = 0; 
+  lateCorrect = 0;
   totalQuestions = document.getElementById("qNum").value;
   GenColor()
 
