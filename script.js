@@ -735,7 +735,7 @@ var totalLetters = [];
 var textBoxes = [];
 
 var correct = 0, incorrect = 0, lateCorrect = 0;
-var guesses = 0;
+var guesses = 0, incorrectGuesses = 0, correctGuesses = 0;
 var totalQuestions = 0;
 
 var focusDirection = false; // false == backwards, true == forwards
@@ -924,7 +924,7 @@ function EndGame(){
   let percent = (correct/totalQuestions) * 100;
 
   document.getElementById("incorrect").innerHTML = `You had ${incorrect} incorrect colors out of ${totalQuestions}`
-  document.getElementById("correct").innerHTML = `You had ${correct} incorrect colors out of ${totalQuestions}`
+  document.getElementById("correct").innerHTML = `You had ${correct} correct colors out of ${totalQuestions}`
   document.getElementById("summary").innerHTML = `You scored a %${percent.toFixed(2)} with a time of ${finalTime}`
 }
 
@@ -988,8 +988,17 @@ function ButtonCheck(){
   }
   guesses++;
   if(text.toLowerCase() == curColor.name.toLowerCase().replace(/\s+/g, '')){
-    if(guesses <= 6) correct++;
-    else incorrect++;
+    if(guesses <= 6){
+      correct++;
+      correctGuesses++;
+    }else if(guesses <= 15){ 
+      lateCorrect++;
+      correct++;
+      correctGuesses++;
+    }else{
+      incorrect++;
+      incorrectGuesses++;
+    }
     GenColor();
   }else{
     DrawWord();
@@ -1014,11 +1023,17 @@ function Check(){
   }
   guesses++;
   if(text.toLowerCase() == curColor.name.toLowerCase().replace(/\s+/g, '')){
-    if(guesses <= 6) correct++;
-    else if(guesses <= 15){ 
+    if(guesses <= 6){
+      correct++;
+      correctGuesses++;
+    }else if(guesses <= 15){ 
       lateCorrect++;
       correct++;
-    }else incorrect++;
+      correctGuesses++;
+    }else{
+      incorrect++;
+      incorrectGuesses++;
+    }
     GenColor()
   }else{
     DrawWord()
