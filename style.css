@@ -4,7 +4,7 @@ html {
 }
 
 body{
-  background-color: rgb(100, 100, 100, 0);
+  background-color: rgb(10, 10, 10, 1);
 }
 
 .letterBox{
@@ -50,6 +50,7 @@ h4{
   width: min(70vw, 70vh); 
   height: min(30vw, 30vh);
   margin: auto;
+  transition: background-color .3s ease;
 }
 .colorBoxBorder{
   border: min(2vh, 2vw), dashed, rgba(255, 255, 255, 1);
