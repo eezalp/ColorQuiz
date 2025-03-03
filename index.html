@@ -10,13 +10,18 @@
       <button class="startBut" onclick="Start()">Start</button>
     </div>
     <div id="main" class="main" hidden="true">
-      <h1>What color is this?</h1>
-      <h2 id="timerBox"></h2>
-      <h4 id="colorCount">0/300</h4>
-      <div id="colorBox" class="colorBox">
+      <div class="topBar">
+        <h2 id="timerBox" class="topBarText"></h2>
+        <h2 id="colorCount" class="topBarText">0/300</h4>
+      </div>
+      <div class="questionBox">
+        <h1>What color is this?</h1>
+        <div id="colorBox" class="colorBox">
         <div class="colorBoxBorder"></div>
       </div>
-      <br>
+      <div class="midBar">
+        
+      </div>
       <div id="answerBox" class="answerBox"></div>
       <div class="buttonBox">
         <input type="button" value="Check" class="button" onclick="ButtonCheck()">

@@ -939,7 +939,7 @@ function GenColor(){
   curColor = colorList[Randrange(0, colorList.length)]
   curColor.name = curColor.name.toLowerCase();
 
-  document.body.style = `background-image: linear-gradient(.25turn, ${curColor.code}, ${bgCenter}, ${bgCenter}, ${curColor.code});`;
+  // document.body.style = `background-image: linear-gradient(.25turn, ${curColor.code}, ${bgCenter}, ${bgCenter}, ${curColor.code});`;
 
   colorDiv.style.backgroundColor = curColor.code;
   revealedLetters = [];
