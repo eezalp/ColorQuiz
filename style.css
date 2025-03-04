@@ -216,6 +216,31 @@ h4{
   margin: auto;
   padding-top: 1%;
 }
+
+.goHome{
+  padding: 0px;
+  width: 48%;
+  height: 100%; 
+  margin-left: 26%;
+
+  background-color: #00000030;
+  border: 2px solid whitesmoke;
+
+  color: white;
+  font-size: 25px;
+
+  transition: background-color .3s, border-width .3s;
+  
+  overflow: hidden;
+}
+.goHome:hover{
+  background-color: black;
+  border-width:10px;
+  border-bottom: 2px solid whitesmoke;
+  border-top: 2px solid whitesmoke;
+  border-color: palegoldenrod;
+}
+
 br {
   content: '\A';
   display: contents;
@@ -248,6 +273,10 @@ br {
 .segmentTitle{
   color: white;
   margin: 0;
+}
+
+.summary{
+  color: white;
 }
 
 .qNum{
@@ -305,6 +334,52 @@ br {
 .incorrect{
   color: red;
 }
+.incorrectSlider{
+  background-color: gray;
+  appearance: none;
+  transition: background-color .3s;
+  overflow: hidden;
+}
+.incorrectSlider:hover{
+  background-color: gray;
+}
+.incorrectSlider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 4px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: black; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+  box-shadow: -1003px 0 0px 1000px red;
+  transition: box-shadow .3s;
+  
+}
+.incorrectSlider::-webkit-slider-thumb:hover{
+  box-shadow: -1003px 0 0px 1000px #E00;
+}
 .correct{
   color: lime;
+}
+.correctSlider{
+  background-color: gray;
+  appearance: none;
+  transition: background-color .3s;
+  overflow: hidden;
+}
+.correctSlider:hover{
+  background-color: gray;
+}
+.correctSlider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 4px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: black; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+  box-shadow: -1003px 0 0px 1000px green;
+  transition: box-shadow .3s;
+  
+}
+.correctSlider::-webkit-slider-thumb:hover{
+  box-shadow: -1003px 0 0px 1000px lime;
 }

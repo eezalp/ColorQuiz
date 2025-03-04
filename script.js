@@ -916,7 +916,9 @@ function Randrange(min, max){
 }
 
 function EndGame(){
-  document.body.style = `background-image: linear-gradient(.25turn, #000000, #EEEEEE, #000000);`;
+  let incorrectSlider = document.getElementById("incorrectSlider");
+  let correctSlider = document.getElementById("correctSlider");
+  // document.body.style = `background-image: linear-gradient(.25turn, #000000, #EEEEEE, #000000);`;
   clearInterval(timerInterval);
   document.getElementById("main").hidden = true;
   document.getElementById("done").hidden = false;
@@ -926,6 +928,11 @@ function EndGame(){
   document.getElementById("incorrect").innerHTML = `You had ${incorrect} incorrect colors out of ${totalQuestions}`
   document.getElementById("correct").innerHTML = `You had ${correct} correct colors out of ${totalQuestions}`
   document.getElementById("summary").innerHTML = `You scored a %${percent.toFixed(2)} with a time of ${finalTime}`
+  
+  incorrectSlider.max = totalQuestions;
+  incorrectSlider.value = incorrect;
+  correctSlider.max = totalQuestions;
+  correctSlider.value = correct;
 }
 
 var barShown = false;
@@ -1064,4 +1071,3 @@ function Check(){
     DrawWord()
   }
 }
-
