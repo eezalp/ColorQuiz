@@ -15,9 +15,10 @@
     <div id="main" class="main" hidden="true">
 
       <div class="questionBox">
-        <div class="topBar">
+        <div class="topBar" id="topBar">
           <h2 id="timerBox" class="topBarText"></h2>
           <h2 id="colorCount" class="topBarText">0/300</h4>
+          <button id="topBarBut" class="topBarDrawer" onclick="HideBar()"></button>
         </div>
         <h1 class="question" id="question">What color is this?</h1>
       </div>
@@ -33,7 +34,7 @@
           <input type="button" value="Give Up" class="button" onclick="GiveUp()">
         </div>
       </div>
-      
+
     </div>
     <div id="done" class="done" hidden="true">
       <h1>Results</h1>

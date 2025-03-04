@@ -928,6 +928,18 @@ function EndGame(){
   document.getElementById("summary").innerHTML = `You scored a %${percent.toFixed(2)} with a time of ${finalTime}`
 }
 
+var barShown = false;
+
+function HideBar(){
+  let bar = document.getElementById("topBar");
+  let but = document.getElementById("topBarBut");
+
+  bar.style = barShown ? "height: 1%;" : "height: 6%;";
+  but.style = barShown ? "transform: rotate(90);" : "transform: rotate(0);";
+
+  barShown = !barShown;
+}
+
 function GenColor(){
   const bgCenter = "rgba(0, 0, 0, .3)";
   if(colorList.length == (colors.length - totalQuestions)){
