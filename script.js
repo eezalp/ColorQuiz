@@ -922,7 +922,9 @@ function EndGame(){
   clearInterval(timerInterval);
   document.getElementById("main").hidden = true;
   document.getElementById("done").hidden = false;
-  finalTime = FormatTime(new Date() - startTime);
+  let extraTime = incorrectGuesses * 30000;
+  finalTime = FormatTime((new Date() - startTime) + extraTime);
+  let actualTime = FormatTime(new Date() - startTime);
   let percent = (correct/totalQuestions) * 100;
 
   document.getElementById("incorrect").innerHTML = `You had ${incorrect} incorrect colors out of ${totalQuestions}`
@@ -933,6 +935,8 @@ function EndGame(){
   incorrectSlider.value = incorrect;
   correctSlider.max = totalQuestions;
   correctSlider.value = correct;
+  
+  
 }
 
 var barShown = false;
@@ -994,6 +998,16 @@ function OnLoad(){
   title.style = tmp;
 
   document.getElementById("qNum").max = colors.length;
+  let penaltyPopup = document.getElementById("penaltyPopup");
+  let penaltyText = document.getElementById("penalty");
+  penaltyText.addEventListener("mouseenter", function(){
+    penaltyPopup.classList.add("popupEnabled");
+    penaltyPopup.classList.remove("popupDisabled");
+  });
+  penaltyText.addEventListener("mouseleave", function(){
+    penaltyPopup.classList.remove("popupEnabled");
+    penaltyPopup.classList.add("popupDisabled");
+  });
 }
 
 function Start(){
