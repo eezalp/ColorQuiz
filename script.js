@@ -934,8 +934,8 @@ function HideBar(){
   let bar = document.getElementById("topBar");
   let but = document.getElementById("topBarBut");
 
-  bar.style = barShown ? "height: 1%;" : "height: 6%;";
-  but.style = barShown ? "transform: rotate(90);" : "transform: rotate(0);";
+  bar.style = barShown ? "height: 0%;" : "height: 6%;";
+  but.style = barShown ? "transform: rotate(0deg);" : "transform: rotate(90);";
 
   barShown = !barShown;
 }
@@ -1051,3 +1051,4 @@ function Check(){
     DrawWord()
   }
 }
+

@@ -35,21 +35,36 @@ body{
 
   border: none;
   box-shadow: 3px 4px 0 -2px #000000;
+
+  transition: background-color .2s;
+  transition: width .2s;
+  transition: height .2s;
+}
+.letterBox:hover{
+  width: max(3.2vw, 3.2vh);
+  height: max(3.2vw, 3.2vh);
+  background-color: rgb(14, 14, 14);
 }
 
 .topBarDrawer{
   position: absolute;
   top: 0;
-  left: 40%;
-  width: 1vh;
-  height: 1.5vh;
+  left: calc(40% - 3vh);
+  width: 2vh;
+  height: 3vh;
 
   border: none;
   background-image: url("dropdownArrow.png");
   background-color: transparent;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;  
 
-  transition: transform .3s ease-in;
+  transition: transform .3s ease;
+
+  transform: rotate(90deg);
 }
+
 .topBar{
   background-color: rgb(40, 40, 40);
   margin: auto;
@@ -111,8 +126,12 @@ h4{
   height: min(30vw, 30vh);
   margin: auto;
   transition: background-color .5s ease;
+  transition: width .5s ease;
   margin-bottom: 0px;
   padding-bottom: 0px;
+}
+.colorBox:hover{
+  width: min(100vw, 100vh); 
 }
 .colorBoxBorder{
   border: min(2vh, 2vw), dashed, rgba(255, 255, 255, 1);
@@ -129,8 +148,12 @@ h4{
   height: 100%;
   z-index: 0;
   
-
   box-sizing: border-box;
+
+  transition: border-width .5s ease;
+}
+.colorBoxBorder:hover{
+  border-width: min(3vh, 3vw);
 }
 
 .questionBox{
@@ -162,8 +185,28 @@ h4{
 .button{
   padding: 0px;
   margin: 0px;
-  width: 50%;
+  width: 48%;
   height: 100%; 
+
+  border: 2px solid transparent;
+  background-color: #00000030;
+  border-right: 2px solid whitesmoke;
+  border-bottom: 2px solid whitesmoke;
+  border-top: 2px solid whitesmoke;
+  border-left: 2px solid whitesmoke;
+  margin-right: 5px;
+
+  color: white;
+  font-size: 25px;
+
+  transition: background-color .3s;
+  transition: border-width .3s;
+}
+.button:hover{
+  background-color: black;
+  border-width: 10px;
+  border-bottom: 2px solid whitesmoke;
+  border-top: 2px solid whitesmoke;
 }
 .buttonBox{
   font-size: 0px;
