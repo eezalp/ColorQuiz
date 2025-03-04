@@ -940,7 +940,7 @@ function GenColor(){
   curColor.name = curColor.name.toLowerCase();
 
   // document.body.style = `background-image: linear-gradient(.25turn, ${curColor.code}, ${bgCenter}, ${bgCenter}, ${curColor.code});`;
-
+  document.getElementById("question").style = `background-color: ${curColor.code};`
   colorDiv.style.backgroundColor = curColor.code;
   revealedLetters = [];
   totalLetters = [];

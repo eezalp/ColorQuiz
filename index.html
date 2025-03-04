@@ -6,27 +6,34 @@
   <script src="script.js"></script>
   <div class="background">
     <div id="home" class="home">
+      <div class="titleBar">
+        <h1 id="title" class="title">Color Quiz</h1>
+      </div>
       <input id="qNum" class="qNum" type="number" value="180">
       <button class="startBut" onclick="Start()">Start</button>
     </div>
     <div id="main" class="main" hidden="true">
-      <div class="topBar">
-        <h2 id="timerBox" class="topBarText"></h2>
-        <h2 id="colorCount" class="topBarText">0/300</h4>
-      </div>
+
       <div class="questionBox">
-        <h1>What color is this?</h1>
-        <div id="colorBox" class="colorBox">
+        <div class="topBar">
+          <h2 id="timerBox" class="topBarText"></h2>
+          <h2 id="colorCount" class="topBarText">0/300</h4>
+        </div>
+        <h1 class="question" id="question">What color is this?</h1>
+      </div>
+
+      <div id="colorBox" class="colorBox">
         <div class="colorBoxBorder"></div>
       </div>
+
       <div class="midBar">
-        
+        <div id="answerBox" class="answerBox"></div>
+        <div class="buttonBox">
+          <input type="button" value="Check" class="button" onclick="ButtonCheck()">
+          <input type="button" value="Give Up" class="button" onclick="GiveUp()">
+        </div>
       </div>
-      <div id="answerBox" class="answerBox"></div>
-      <div class="buttonBox">
-        <input type="button" value="Check" class="button" onclick="ButtonCheck()">
-        <input type="button" value="Give Up" class="button" onclick="GiveUp()">
-      </div>
+      
     </div>
     <div id="done" class="done" hidden="true">
       <h1>Results</h1>
