@@ -974,6 +974,19 @@ function GenColor(){
 function OnLoad(){
   colorDiv = document.getElementById("colorBox")
   answerBox = document.getElementById("answerBox")
+
+  let title = document.getElementById("titleBar");
+  let tmp = "background-image: radial-gradient(";
+  for(let i = 0; i < colors.length; i++){
+    if(i != 0)tmp += ", ";
+    tmp += `${colors[i].code}`;
+  }
+  tmp += ");"
+  console.log(tmp);
+  document.getElementById("title").style = tmp;
+  title.style = tmp;
+
+  document.getElementById("qNum").max = colors.length;
 }
 
 function Start(){
