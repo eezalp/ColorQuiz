@@ -339,6 +339,8 @@ br {
   appearance: none;
   transition: background-color .3s;
   overflow: hidden;
+  
+  width: 80%;
 }
 .incorrectSlider:hover{
   background-color: gray;
@@ -365,6 +367,8 @@ br {
   appearance: none;
   transition: background-color .3s;
   overflow: hidden;
+  
+  width: 80%;
 }
 .correctSlider:hover{
   background-color: gray;
