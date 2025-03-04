@@ -36,9 +36,7 @@ body{
   border: none;
   box-shadow: 3px 4px 0 -2px #000000;
 
-  transition: background-color .2s;
-  transition: width .2s;
-  transition: height .2s;
+  transition: background-color .2s, width .2s, height .2s;
 }
 .letterBox:hover{
   width: max(3.2vw, 3.2vh);
@@ -125,8 +123,7 @@ h4{
   width: min(70vw, 70vh); 
   height: min(30vw, 30vh);
   margin: auto;
-  transition: background-color .5s ease;
-  transition: width .5s ease;
+  transition: background-color .5s ease, width .5s ease;
   margin-bottom: 0px;
   padding-bottom: 0px;
 }
@@ -199,8 +196,7 @@ h4{
   color: white;
   font-size: 25px;
 
-  transition: background-color .3s;
-  transition: border-width .3s;
+  transition: background-color .3s, border-width .3s;
 }
 .button:hover{
   background-color: black;
