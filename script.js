@@ -1027,7 +1027,7 @@ function Start(){
   incorrect = 0; 
   lateCorrect = 0;
   totalLettersRevealed = 0;
-  
+
   totalQuestions = document.getElementById("qNum").value;
   GenColor()
 
@@ -1091,11 +1091,20 @@ window.addEventListener('hashchange', function (e) {
   var hash = window.location.hash;
   console.log(hash);
   if(hash === '#results'){
+    document.getElementById("home").hidden = true;
+    document.getElementById("done").hidden = false;
+    document.getElementById("main").hidden = true;
     EndGame();
   }else if(hash === '#home'){
     if(timerInterval) clearInterval(timerInterval);
-    ToHome();
+    // ToHome();
+    document.getElementById("home").hidden = false;
+    document.getElementById("done").hidden = true;
+    document.getElementById("main").hidden = true;
   }else if(hash === '#game'){
+    document.getElementById("home").hidden = true;
+    document.getElementById("done").hidden = true;
+    document.getElementById("main").hidden = false;
     Start();
   }
 });
