@@ -12,7 +12,10 @@
       <div class="settings">
         <h1 id="settingsTitle" class="segmentTitle">Quiz Settings</h1>
         <label class="qNumLabel">Question Count: <input id="qNum" class="qNum" type="number" value="180"></label>
-        <button class="startBut" onclick="Start()">Start</button>
+        
+        <a href="#game">
+          <button class="startBut" onclick="Start()">Start</button>
+        </a>
       </div>
     </div>
     <div id="main" class="main" hidden>
@@ -39,26 +42,30 @@
       </div>
 
     </div>
-    <div id="done" class="done">
-      <h1 class="segmentTitle">Results</h1>
-      <h3 id="incorrect" class="incorrect">You had 130 incorrect colors out of 180</h3>
-      <input type="range" id="incorrectSlider" class="incorrectSlider" min=0 disabled>
-      <h3 id="correct" class="correct">You had 50 correct colors out of 180</h3>
-      <input type="range"  id="correctSlider" class="correctSlider" min=0>
-      <div class="timeSummary">
-        <h2 id="realTime" class="summary">Real time: 00:00:00</h2>
-         
-        <div class="hoverPopup penaltyPopup popupEnabled" id="penaltyPopup">
-          <p class="popupText">A 10 second penalty is granted for every letter your receive</p>
-        </div>
-        
-        <h2 id="penalty" class="summary">Penalty: 00:00:00</h2>
-        <div class="rectangle">
+    <section name="results">
+      <div id="done" class="done">
+        <h1 class="segmentTitle">Results</h1>
+        <h3 id="incorrect" class="incorrect">You had 130 incorrect colors out of 180</h3>
+        <input type="range" id="incorrectSlider" class="incorrectSlider" min=0 disabled>
+        <h3 id="correct" class="correct">You had 50 correct colors out of 180</h3>
+        <input type="range"  id="correctSlider" class="correctSlider" min=0 disabled>
+        <div class="timeSummary">
+          <h2 id="realTime" class="summary">Real time: 00:00:00</h2>
           
+          <div class="hoverPopup penaltyPopup popupDisabled" id="penaltyPopup">
+            <p class="popupText">A 10 second penalty is granted for every hint letter you receive</p>
+          </div>
+          
+          <h2 id="penalty" class="summary">Penalty: 00:00:00</h2>
+          <div class="rectangle">
+            
+          </div>
+          <h2 id="total" class="summary">Total Time: 00:00:00</h2>
         </div>
-        <h2 id="total" class="summary">Total Time: 00:00:00</h2>
+        <a href="#home">
+        <button class="goHome">Try Again</button>
+        </a>
       </div>
-      <button class="goHome" onclick="ToHome()">Try Again</button>
-    </div>
+    </section>
   </div>
 </body>
