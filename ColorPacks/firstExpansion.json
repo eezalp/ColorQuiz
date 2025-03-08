@@ -1,0 +1,516 @@
+{
+  "colors":[
+    {
+      "name": "half and half", 
+      "code": "#FFFEE1"
+    }, 
+    {
+      "name": "forget me not", 
+      "code": "#FFF1EE"
+    }, 
+    {
+      "name": "vis vis", 
+      "code": "#FFEFA1"
+    }, 
+    {
+      "name": "blanched almond", 
+      "code": "#FFEBCD"
+    }, 
+    {
+      "name": "moccasin", 
+      "code": "#FFE4B5"
+    }, 
+    {
+      "name": "frangipani", 
+      "code": "#FFDEB3"
+    }, 
+    {
+      "name": "navajo white", 
+      "code": "#FFDEAD"
+    }, 
+    {
+      "name": "Bastard-amber", 
+      "code": "#FFCC88"
+    }, 
+    {
+      "name": "selective yellow", 
+      "code": "#FFBA00"
+    }, 
+    {
+      "name": "macaroni and cheese", 
+      "code": "#FFB97B"
+    }, 
+    {
+      "name": "light salmon", 
+      "code": "#FFA07A"
+    }, 
+    {
+      "name": "Vivid tangerine", 
+      "code": "#FF9980"
+    }, 
+    {
+      "name": "aromic tangerine", 
+      "code": "#FF9966"
+    }, 
+    {
+      "name": "Drunk Tank Pink", 
+      "code": "#FF91AF"
+    }, 
+    {
+      "name": "orange red", 
+      "code": "#FF4500"
+    }, 
+    {
+      "name": "Razzle dazzle rose", 
+      "code": "#FF33CC"
+    }, 
+    {
+      "name": "Aureolin", 
+      "code": "#FDEE00"
+    }, 
+    {
+      "name": "double pearl lusta", 
+      "code": "#FCF4D0"
+    }, 
+    {
+      "name": "tickle me pink", 
+      "code": "#FC80A5"
+    }, 
+    {
+      "name": "shocking pink", 
+      "code": "#FC0FC0"
+    }, 
+    {
+      "name": "Banan-appeal", 
+      "code": "#FBF2B9"
+    }, 
+    {
+      "name": "light golden rod yellow", 
+      "code": "#FAFAD2"
+    }, 
+    {
+      "name": "stil de grain yellow", 
+      "code": "#FADA53"
+    }, 
+    {
+      "name": "salmon", 
+      "code": "#FA8072"
+    }, 
+    {
+      "name": "texas", 
+      "code": "#F8F99C"
+    }, 
+    {
+      "name": "Quarter spanish white", 
+      "code": "#F7F2E1"
+    }, 
+    {
+      "name": "australian mint", 
+      "code": "#F5FFBE"
+    }, 
+    {
+      "name": "white smoke", 
+      "code": "#F5F5F5"
+    }, 
+    {
+      "name": "Hollywood Cerise", 
+      "code": "#F400A1"
+    }, 
+    {
+      "name": "we peep", 
+      "code": "#F3CEF3"
+    }, 
+    {
+      "name": "Alabaster Gleam", 
+      "code": "#F0DEBD"
+    }, 
+    {
+      "name": "pale golden rod", 
+      "code": "#EEE8AA"
+    }, 
+    {
+      "name": "double colonial white", 
+      "code": "#EEE3AD"
+    }, 
+    {
+      "name": "zinnwaldite", 
+      "code": "#EBC2AF"
+    }, 
+    {
+      "name": "Ebb", 
+      "code": "#E9E3E3"
+    }, 
+    {
+      "name": "dark salmon", 
+      "code": "#E9967A"
+    }, 
+    {
+      "name": "Exuberance", 
+      "code": "#E86800"
+    }, 
+    {
+      "name": "hint of green", 
+      "code": "#E6FFE9"
+    }, 
+    {
+      "name": "double spanish white", 
+      "code": "#E6D7B9"
+    }, 
+    {
+      "name": "Amaranth", 
+      "code": "#E52B50"
+    }, 
+    {
+      "name": "Gamboge", 
+      "code": "#E49B0F"
+    }, 
+    {
+      "name": "alizarian crimson", 
+      "code": "#E32636"
+    }, 
+    {
+      "name": "Permanent Alizarin Crimson", 
+      "code": "#E32636"
+    }, 
+    {
+      "name": "Glory Red", 
+      "code": "#e31837"
+    }, 
+    {
+      "name": "Permanent Geranium Lake", 
+      "code": "#E12C2C"
+    }, 
+    {
+      "name": "burly wood", 
+      "code": "#DEB887"
+    }, 
+    {
+      "name": "pale violet red", 
+      "code": "#DB7093"
+    }, 
+    {
+      "name": "Maximum Green Yellow", 
+      "code": "#D9E650"
+    }, 
+    {
+      "name": "honeysuckle", 
+      "code": "#D94F70"
+    }, 
+    {
+      "name": "Gin", 
+      "code": "#d8e4bc"
+    }, 
+    {
+      "name": "new york pink", 
+      "code": "#D88387"
+    }, 
+    {
+      "name": "can can", 
+      "code": "#D591A4"
+    }, 
+    {
+      "name": "Elephant Breath", 
+      "code": "#D3CABB"
+    }, 
+    {
+      "name": "light wisteria", 
+      "code": "#D3ABE7"
+    }, 
+    {
+      "name": "Blue romance", 
+      "code": "#D2F6DE"
+    }, 
+    {
+      "name": "medium violet red", 
+      "code": "#C71585"
+    }, 
+    {
+      "name": "fuzzy wuzzy brown", 
+      "code": "#C45655"
+    }, 
+    {
+      "name": "California Gold", 
+      "code": "#c39e6d"
+    }, 
+    {
+      "name": "indian khaki", 
+      "code": "#C1AE95"
+    }, 
+    {
+      "name": "medium orchid", 
+      "code": "#BA55D3"
+    }, 
+    {
+      "name": "night shadz", 
+      "code": "#B43C55"
+    }, 
+    {
+      "name": "shiraz", 
+      "code": "#B20913"
+    }, 
+    {
+      "name": "Shady lady", 
+      "code": "#ACAAAC"
+    }, 
+    {
+      "name": "Incarnadine", 
+      "code": "#AA0022"
+    }, 
+    {
+      "name": "coffee", 
+      "code": "#A67B5B"
+    }, 
+    {
+      "name": "University of Pennsylvania red", 
+      "code": "#A50021"
+    }, 
+    {
+      "name": "amethyst smoke", 
+      "code": "#A397B4"
+    }, 
+    {
+      "name": "Amaranth Deep Purple", 
+      "code": "#9F2B68"
+    }, 
+    {
+      "name": "granny smith apple", 
+      "code": "#9DE093"
+    }, 
+    {
+      "name": "Whitecaps Blue", 
+      "code": "#9DC2EA"
+    }, 
+    {
+      "name": "fresh eggplant", 
+      "code": "#990066"
+    }, 
+    {
+      "name": "purple mountain's majesty", 
+      "code": "#967882"
+    }, 
+    {
+      "name": "arrowtown", 
+      "code": "#948771"
+    }, 
+    {
+      "name": "tanager turquoise", 
+      "code": "#91DCE8"
+    }, 
+    {
+      "name": "cadet gray", 
+      "code": "#91A3B0"
+    }, 
+    {
+      "name": "Quinacridone Magenta", 
+      "code": "#8E3A59"
+    }, 
+    {
+      "name": "saddle brown", 
+      "code": "#8B4513"
+    }, 
+    {
+      "name": "true V", 
+      "code": "#8A73D6"
+    }, 
+    {
+      "name": "blue marguerite", 
+      "code": "#8665C8"
+    }, 
+    {
+      "name": "chelsea cucumber", 
+      "code": "#83AA5D"
+    }, 
+    {
+      "name": "De York", 
+      "code": "#82C082"
+    }, 
+    {
+      "name": "medium slate blue", 
+      "code": "#7B68EE"
+    }, 
+    {
+      "name": "Della Robbia Blue", 
+      "code": "#7a9dcb"
+    }, 
+    {
+      "name": "Xanadu", 
+      "code": "#738678"
+    }, 
+    {
+      "name": "go ben", 
+      "code": "#726D4E"
+    }, 
+    {
+      "name": "rose bud cherry", 
+      "code": "#6C0944"
+    }, 
+    {
+      "name": "spicy mustard", 
+      "code": "#6B5A0F"
+    }, 
+    {
+      "name": "zambezi", 
+      "code": "#685558"
+    }, 
+    {
+      "name": "nutmeg wood finish", 
+      "code": "#683600"
+    }, 
+    {
+      "name": "Screamin' Green", 
+      "code": "#66FF66"
+    }, 
+    {
+      "name": "tyrian purple", 
+      "code": "#66023C"
+    }, 
+    {
+      "name": "corn flower blue", 
+      "code": "#6495ED"
+    }, 
+    {
+      "name": "costa del sol", 
+      "code": "#625932"
+    }, 
+    {
+      "name": "Delphinium Blue", 
+      "code": "#6198AE"
+    }, 
+    {
+      "name": "meadowbrook", 
+      "code": "#60A0A3"
+    }, 
+    {
+      "name": "Glaucous", 
+      "code": "#6082B6"
+    }, 
+    {
+      "name": "waikawa gray", 
+      "code": "#5A6E9C"
+    }, 
+    {
+      "name": "Caput Mortuum Brown", 
+      "code": "#592720"
+    }, 
+    {
+      "name": "NYU Violet", 
+      "code": "#57068c"
+    }, 
+    {
+      "name": "Faux-Medium aquamarine", 
+      "code": "#55e19e"
+    }, 
+    {
+      "name": "dark olive green", 
+      "code": "#556B2F"
+    }, 
+    {
+      "name": "Goose Turd Green", 
+      "code": "#54FFA2"
+    }, 
+    {
+      "name": "bossanova", 
+      "code": "#4C3262"
+    }, 
+    {
+      "name": "Smaragdine", 
+      "code": "#4A9976"
+    }, 
+    {
+      "name": "Moss Green", 
+      "code": "#4A5D23"
+    }, 
+    {
+      "name": "drab dark brown", 
+      "code": "#4A412A"
+    }, 
+    {
+      "name": "Hippie green", 
+      "code": "#468647"
+    }, 
+    {
+      "name": "bulgarian rose", 
+      "code": "#460709"
+    }, 
+    {
+      "name": "Bronze olive", 
+      "code": "#443909"
+    }, 
+    {
+      "name": "Signal Blue", 
+      "code": "#3E8EDE"
+    }, 
+    {
+      "name": "Arsenic", 
+      "code": "#3B444B"
+    }, 
+    {
+      "name": "bleached cedar", 
+      "code": "#352442"
+    }, 
+    {
+      "name": "mediterranea", 
+      "code": "#32575D"
+    }, 
+    {
+      "name": "rangitoto", 
+      "code": "#323527"
+    }, 
+    {
+      "name": "Illuminating Emerald", 
+      "code": "#319177"
+    }, 
+    {
+      "name": "ylnmn blue", 
+      "code": "#2E5090"
+    }, 
+    {
+      "name": "Zinnwaldite Brown", 
+      "code": "#2C1608"
+    }, 
+    {
+      "name": "te papa green", 
+      "code": "#1E433C"
+    }, 
+    {
+      "name": "midnight blue", 
+      "code": "#191970"
+    }, 
+    {
+      "name": "chathams blue", 
+      "code": "#175579"
+    }, 
+    {
+      "name": "International Klein Blue", 
+      "code": "#130a8f"
+    }, 
+    {
+      "name": "Japanese laurel", 
+      "code": "#0E860E"
+    }, 
+    {
+      "name": "medium spring green", 
+      "code": "#00FA9A"
+    }, 
+    {
+      "name": "caribbean green", 
+      "code": "#00CC99"
+    }, 
+    {
+      "name": "Viridian", 
+      "code": "#009B7D"
+    }, 
+    {
+      "name": "azure radiance", 
+      "code": "#007FFF"
+    }, 
+    {
+      "name": "Skobeloff", 
+      "code": "#007474"
+    }, 
+    {
+      "name": "british racing green", 
+      "code": "#004225"
+    }
+  ]
+}

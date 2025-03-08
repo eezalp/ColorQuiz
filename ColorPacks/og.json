@@ -1,0 +1,212 @@
+{
+  "colors":[
+    {
+      "name": "white", 
+      "code": "#FFFFFF"
+    }, 
+    {
+      "name": "yellow", 
+      "code": "#FFFF00"
+    }, 
+    {
+      "name": "Cornsilk", 
+      "code": "#FFF8DC"
+    }, 
+    {
+      "name": "PapayaWhip", 
+      "code": "#FFEFD5"
+    }, 
+    {
+      "name": "peach", 
+      "code": "#FFE5B4"
+    }, 
+    {
+      "name": "Rubber Ducky Yellow", 
+      "code": "#FFD801"
+    }, 
+    {
+      "name": "School bus yellow", 
+      "code": "#FFD800"
+    }, 
+    {
+      "name": "gold", 
+      "code": "#FFD700"
+    }, 
+    {
+      "name": "pink", 
+      "code": "#FFC0CB"
+    }, 
+    {
+      "name": "orange", 
+      "code": "#FFA500"
+    }, 
+    {
+      "name": "coral", 
+      "code": "#FF7F50"
+    }, 
+    {
+      "name": "Coquelicot", 
+      "code": "#FF3800"
+    }, 
+    {
+      "name": "red", 
+      "code": "#FF0000"
+    }, 
+    {
+      "name": "Pyrrometheneoxazolone", 
+      "code": "#F20B0B"
+    }, 
+    {
+      "name": "Khaki", 
+      "code": "#F0E68C"
+    }, 
+    {
+      "name": "violet", 
+      "code": "#EE82EE"
+    }, 
+    {
+      "name": "Lavender Pinocchio", 
+      "code": "#EBDDE2"
+    }, 
+    {
+      "name": "lavender", 
+      "code": "#E6E6FA"
+    }, 
+    {
+      "name": "Dimorphotheca Magenta", 
+      "code": "#E3319D"
+    }, 
+    {
+      "name": "medium candy apple red", 
+      "code": "#E2062C"
+    }, 
+    {
+      "name": "plum", 
+      "code": "#DDA0DD"
+    }, 
+    {
+      "name": "Gainsboro", 
+      "code": "#DCDCDC"
+    }, 
+    {
+      "name": "crimson", 
+      "code": "#DC143C"
+    }, 
+    {
+      "name": "silver", 
+      "code": "#C0C0C0"
+    }, 
+    {
+      "name": "Robin Egg Blue", 
+      "code": "#BDEDFF"
+    }, 
+    {
+      "name": "pussywillow gray", 
+      "code": "#AEACA1"
+    }, 
+    {
+      "name": "Rose Dust", 
+      "code": "#997070"
+    }, 
+    {
+      "name": "Roman Silver", 
+      "code": "#838996"
+    }, 
+    {
+      "name": "gray", 
+      "code": "#808080"
+    }, 
+    {
+      "name": "olive", 
+      "code": "#808000"
+    }, 
+    {
+      "name": "maroon", 
+      "code": "#800000"
+    }, 
+    {
+      "name": "aquamarine", 
+      "code": "#7FFFD4"
+    }, 
+    {
+      "name": "Chartreuse", 
+      "code": "#7FFF00"
+    }, 
+    {
+      "name": "puce", 
+      "code": "#7F5A58"
+    }, 
+    {
+      "name": "Ultra Violet", 
+      "code": "#7B6D8D"
+    }, 
+    {
+      "name": "Air Superiority Blue", 
+      "code": "#72A0C1"
+    }, 
+    {
+      "name": "brown", 
+      "code": "#6F4E37"
+    }, 
+    {
+      "name": "Blue Zircon", 
+      "code": "#57FEFF"
+    }, 
+    {
+      "name": "Stoplight Go Green", 
+      "code": "#57E964"
+    }, 
+    {
+      "name": "indigo", 
+      "code": "#4B0082"
+    }, 
+    {
+      "name": "Black Cat", 
+      "code": "#413839"
+    }, 
+    {
+      "name": "iridium", 
+      "code": "#3D3C3A"
+    }, 
+    {
+      "name": "Isle Of Man Green", 
+      "code": "#22CE83"
+    }, 
+    {
+      "name": "aqua", 
+      "code": "#00FFFF"
+    }, 
+    {
+      "name": "lime", 
+      "code": "#00FF00"
+    }, 
+    {
+      "name": "teal", 
+      "code": "#008080"
+    }, 
+    {
+      "name": "Ao", 
+      "code": "#008000"
+    }, 
+    {
+      "name": "green", 
+      "code": "#008000"
+    }, 
+    {
+      "name": "Samco Blue", 
+      "code": "#0002FF"
+    }, 
+    {
+      "name": "blue", 
+      "code": "#0000FF"
+    }, 
+    {
+      "name": "navy", 
+      "code": "#000080"
+    }, 
+    {
+      "name": "black", 
+      "code": "#000000"
+    }
+  ]
+}

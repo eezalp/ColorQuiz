@@ -26,7 +26,11 @@ body{
   font-size: calc(max(3vw, 3vh) * .75);
   text-align: center;
 
-  background-color: rgba(0, 0, 0, .1);
+  background-color: rgba(0, 0, 0, .4);
+  margin: 4px;
+  margin-bottom: 16px;
+
+  border-radius: 14px;
   
   box-sizing: border-box;
   /* border: 1px solid rgb(100, 100, 100); */
@@ -34,14 +38,14 @@ body{
   color: rgb(226, 226, 226);
 
   border: none;
-  box-shadow: 3px 4px 0 -2px #000000;
+  box-shadow: 6px 8px 0 -3px #000000;
 
   transition: background-color .2s, width .2s, height .2s;
 }
 .letterBox:hover{
   width: max(3.2vw, 3.2vh);
   height: max(3.2vw, 3.2vh);
-  background-color: rgb(14, 14, 14);
+  background-color: rgb(0, 0, 0);
 }
 
 .topBarDrawer{
@@ -84,6 +88,47 @@ body{
   margin: 0px;
 }
 
+.packSelector{
+  display: flex;
+  flex-direction: column;
+  place-content: center;
+  /* width: 80%; */
+}
+.packCheckbox{
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  border: 6px solid black;
+  width: 2em;
+  height: 2em;
+  transform: translateY(-.85em);
+  display: grid;
+  place-content: center;
+  border-radius: 1em;
+  margin: 10px;
+}
+.packCheckbox::before {
+  content: "";
+  width: 1.6em;
+  height: 1.6em;
+  border-radius: .8em;
+  transform: scale(0);
+  background-color: antiquewhite;
+  border: 2px solid black;
+  border-width: 900px;
+
+  transition: .2s transform ease-in-out, .2s border-width;
+}
+.packCheckbox:checked::before {
+  transform: scale(1);
+  border-width: 6px;
+}
+.packLabel{
+  font-family: system-ui;
+  color: white;
+  display: grid;
+  grid-template-columns: 2.5em auto;
+}
 
 .titleBar{
   background-color: rgb(0, 0, 0);
@@ -94,8 +139,8 @@ body{
   align-items: center;
 }
 .title{
-  /* background-image: radial-gradient(red, blue, red, blue, red, blue, red, blue, red, blue); */
-  filter: drop-shadow(-2px -2px black) drop-shadow(2px 2px black) drop-shadow(2px -2px black) drop-shadow(-2px 2px black);
+  background-image: linear-gradient(90deg, red, blue, red, blue, red, blue, red, blue, red, blue);
+  /* filter: drop-shadow(-2px -2px red) drop-shadow(2px 2px green) drop-shadow(2px -2px blue) drop-shadow(-2px 2px yellow); */
   color: transparent;
   background-clip: text;
 
@@ -185,6 +230,8 @@ h4{
   flex-direction: column;
   justify-content: center;
 
+  row-gap: 8px;
+
   /* border: 3px solid purple; */
 }
 .button{
@@ -203,6 +250,8 @@ h4{
 
   color: white;
   font-size: 25px;
+
+  border-radius: 3px;
 
   transition: background-color .3s, border-width .3s;
 }

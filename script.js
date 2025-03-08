@@ -1,727 +1,5 @@
-const colors = [
-  {
-     "name":"white",
-     "code":"#FFFFFF",
-  },
-  {
-     "name":"yellow",
-     "code":"#FFFF00",
-  },
-  {
-     "name":"half and half",
-     "code":"#FFFEE1",
-  },
-  {
-     "name":"Cornsilk",
-     "code":"#FFF8DC",
-  },
-  {
-     "name":"forget me not",
-     "code":"#FFF1EE",
-  },
-  {
-     "name":"PapayaWhip",
-     "code":"#FFEFD5",
-  },
-  {
-     "name":"vis vis",
-     "code":"#FFEFA1",
-  },
-  {
-     "name":"blanched almond",
-     "code":"#FFEBCD",
-  },
-  {
-     "name":"peach",
-     "code":"#FFE5B4",
-  },
-  {
-     "name":"moccasin",
-     "code":"#FFE4B5",
-  },
-  {
-     "name":"frangipani",
-     "code":"#FFDEB3",
-  },
-  {
-     "name":"navajo white",
-     "code":"#FFDEAD",
-  },
-  {
-     "name":"Rubber Ducky Yellow",
-     "code":"#FFD801",
-  },
-  {
-     "name":"School bus yellow",
-     "code":"#FFD800",
-  },
-  {
-     "name":"gold",
-     "code":"#FFD700",
-  },
-  {
-     "name":"Bastard-amber",
-     "code":"#FFCC88",
-  },
-  {
-     "name":"pink",
-     "code":"#FFC0CB",
-  },
-  {
-     "name":"selective yellow",
-     "code":"#FFBA00",
-  },
-  {
-     "name":"macaroni and cheese",
-     "code":"#FFB97B",
-  },
-  {
-     "name":"orange",
-     "code":"#FFA500",
-  },
-  {
-     "name":"light salmon",
-     "code":"#FFA07A",
-  },
-  {
-     "name":"Vivid tangerine",
-     "code":"#FF9980",
-  },
-  {
-     "name":"aromic tangerine",
-     "code":"#FF9966",
-  },
-  {
-     "name":"Drunk Tank Pink",
-     "code":"#FF91AF",
-  },
-  {
-     "name":"coral",
-     "code":"#FF7F50",
-  },
-  {
-     "name":"orange red",
-     "code":"#FF4500",
-  },
-  {
-     "name":"Coquelicot",
-     "code":"#FF3800",
-  },
-  {
-     "name":"Razzle dazzle rose",
-     "code":"#FF33CC",
-  },
-  {
-     "name":"red",
-     "code":"#FF0000",
-  },
-  {
-     "name":"Aureolin",
-     "code":"#FDEE00",
-  },
-  {
-     "name":"double pearl lusta",
-     "code":"#FCF4D0",
-  },
-  {
-     "name":"tickle me pink",
-     "code":"#FC80A5",
-  },
-  {
-     "name":"shocking pink",
-     "code":"#FC0FC0",
-  },
-  {
-     "name":"Banan-appeal",
-     "code":"#FBF2B9",
-  },
-  {
-     "name":"light golden rod yellow",
-     "code":"#FAFAD2",
-  },
-  {
-     "name":"stil de grain yellow",
-     "code":"#FADA53",
-  },
-  {
-     "name":"salmon",
-     "code":"#FA8072",
-  },
-  {
-     "name":"texas",
-     "code":"#F8F99C",
-  },
-  {
-     "name":"Quarter spanish white",
-     "code":"#F7F2E1",
-  },
-  {
-     "name":"australian mint",
-     "code":"#F5FFBE",
-  },
-  {
-     "name":"white smoke",
-     "code":"#F5F5F5",
-  },
-  {
-     "name":"Hollywood Cerise",
-     "code":"#F400A1",
-  },
-  {
-     "name":"we peep",
-     "code":"#F3CEF3",
-  },
-  {
-     "name":"Pyrrometheneoxazolone",
-     "code":"#F20B0B",
-  },
-  {
-     "name":"Khaki",
-     "code":"#F0E68C",
-  },
-  {
-     "name":"Alabaster Gleam",
-     "code":"#F0DEBD",
-  },
-  {
-     "name":"pale golden rod",
-     "code":"#EEE8AA",
-  },
-  {
-     "name":"double colonial white",
-     "code":"#EEE3AD",
-  },
-  {
-     "name":"violet",
-     "code":"#EE82EE",
-  },
-  {
-     "name":"Lavender Pinocchio",
-     "code":"#EBDDE2",
-  },
-  {
-     "name":"zinnwaldite",
-     "code":"#EBC2AF",
-  },
-  {
-     "name":"Ebb",
-     "code":"#E9E3E3",
-  },
-  {
-     "name":"dark salmon",
-     "code":"#E9967A",
-  },
-  {
-     "name":"Exuberance",
-     "code":"#E86800",
-  },
-  {
-     "name":"hint of green",
-     "code":"#E6FFE9",
-  },
-  {
-     "name":"lavender",
-     "code":"#E6E6FA",
-  },
-  {
-     "name":"double spanish white",
-     "code":"#E6D7B9",
-  },
-  {
-     "name":"Amaranth",
-     "code":"#E52B50",
-  },
-  {
-     "name":"Gamboge",
-     "code":"#E49B0F",
-  },
-  {
-     "name":"Dimorphotheca Magenta",
-     "code":"#E3319D",
-  },
-  {
-     "name":"alizarian crimson",
-     "code":"#E32636",
-  },
-  {
-     "name":"Permanent Alizarin Crimson",
-     "code":"#E32636",
-  },
-  {
-     "name":"Glory Red",
-     "code":"#e31837",
-  },
-  {
-     "name":"medium candy apple red",
-     "code":"#E2062C",
-  },
-  {
-     "name":"Permanent Geranium Lake",
-     "code":"#E12C2C",
-  },
-  {
-     "name":"burly wood",
-     "code":"#DEB887",
-  },
-  {
-     "name":"plum",
-     "code":"#DDA0DD",
-  },
-  {
-     "name":"Gainsboro",
-     "code":"#DCDCDC",
-  },
-  {
-     "name":"crimson",
-     "code":"#DC143C",
-  },
-  {
-     "name":"pale violet red",
-     "code":"#DB7093",
-  },
-  {
-     "name":"Maximum Green Yellow",
-     "code":"#D9E650",
-  },
-  {
-     "name":"honeysuckle",
-     "code":"#D94F70",
-  },
-  {
-     "name":"Gin",
-     "code":"#d8e4bc",
-  },
-  {
-     "name":"new york pink",
-     "code":"#D88387",
-  },
-  {
-     "name":"can can",
-     "code":"#D591A4",
-  },
-  {
-     "name":"Elephant Breath",
-     "code":"#D3CABB",
-  },
-  {
-     "name":"light wisteria",
-     "code":"#D3ABE7",
-  },
-  {
-     "name":"Blue romance",
-     "code":"#D2F6DE",
-  },
-  {
-     "name":"medium violet red",
-     "code":"#C71585",
-  },
-  {
-     "name":"fuzzy wuzzy brown",
-     "code":"#C45655",
-  },
-  {
-     "name":"California Gold",
-     "code":"#c39e6d",
-  },
-  {
-     "name":"indian khaki",
-     "code":"#C1AE95",
-  },
-  {
-     "name":"silver",
-     "code":"#C0C0C0",
-  },
-  {
-     "name":"Robin Egg Blue",
-     "code":"#BDEDFF",
-  },
-  {
-     "name":"medium orchid",
-     "code":"#BA55D3",
-  },
-  {
-     "name":"night shadz",
-     "code":"#B43C55",
-  },
-  {
-     "name":"shiraz",
-     "code":"#B20913",
-  },
-  {
-     "name":"pussywillow gray",
-     "code":"#AEACA1",
-  },
-  {
-     "name":"Shady lady",
-     "code":"#ACAAAC",
-  },
-  {
-     "name":"Incarnadine",
-     "code":"#AA0022",
-  },
-  {
-     "name":"coffee",
-     "code":"#A67B5B",
-  },
-  {
-     "name":"University of Pennsylvania red",
-     "code":"#A50021",
-  },
-  {
-     "name":"amethyst smoke",
-     "code":"#A397B4",
-  },
-  {
-     "name":"Amaranth Deep Purple",
-     "code":"#9F2B68",
-  },
-  {
-     "name":"granny smith apple",
-     "code":"#9DE093",
-  },
-  {
-     "name":"Whitecaps Blue",
-     "code":"#9DC2EA",
-  },
-  {
-     "name":"Rose Dust",
-     "code":"#997070",
-  },
-  {
-     "name":"fresh eggplant",
-     "code":"#990066",
-  },
-  {
-     "name":"purple mountain's majesty",
-     "code":"#967882",
-  },
-  {
-     "name":"arrowtown",
-     "code":"#948771",
-  },
-  {
-     "name":"tanager turquoise",
-     "code":"#91DCE8",
-  },
-  {
-     "name":"cadet gray",
-     "code":"#91A3B0",
-  },
-  {
-     "name":"Quinacridone Magenta",
-     "code":"#8E3A59",
-  },
-  {
-     "name":"saddle brown",
-     "code":"#8B4513",
-  },
-  {
-     "name":"true V",
-     "code":"#8A73D6",
-  },
-  {
-     "name":"blue marguerite",
-     "code":"#8665C8",
-  },
-  {
-     "name":"chelsea cucumber",
-     "code":"#83AA5D",
-  },
-  {
-     "name":"Roman Silver",
-     "code":"#838996",
-  },
-  {
-     "name":"De York",
-     "code":"#82C082",
-  },
-  {
-     "name":"gray",
-     "code":"#808080",
-  },
-  {
-     "name":"olive",
-     "code":"#808000",
-  },
-  {
-     "name":"maroon",
-     "code":"#800000",
-  },
-  {
-     "name":"aquamarine",
-     "code":"#7FFFD4",
-  },
-  {
-     "name":"Chartreuse",
-     "code":"#7FFF00",
-  },
-  {
-     "name":"puce",
-     "code":"#7F5A58",
-  },
-  {
-     "name":"Ultra Violet",
-     "code":"#7B6D8D",
-  },
-  {
-     "name":"medium slate blue",
-     "code":"#7B68EE",
-  },
-  {
-     "name":"Della Robbia Blue",
-     "code":"#7a9dcb",
-  },
-  {
-     "name":"Xanadu",
-     "code":"#738678",
-  },
-  {
-     "name":"Air Superiority Blue",
-     "code":"#72A0C1",
-  },
-  {
-     "name":"go ben",
-     "code":"#726D4E",
-  },
-  {
-     "name":"brown",
-     "code":"#6F4E37",
-  },
-  {
-     "name":"rose bud cherry",
-     "code":"#6C0944",
-  },
-  {
-     "name":"spicy mustard",
-     "code":"#6B5A0F",
-  },
-  {
-     "name":"zambezi",
-     "code":"#685558",
-  },
-  {
-     "name":"nutmeg wood finish",
-     "code":"#683600",
-  },
-  {
-     "name":"Screamin' Green",
-     "code":"#66FF66",
-  },
-  {
-     "name":"tyrian purple",
-     "code":"#66023C",
-  },
-  {
-     "name":"corn flower blue",
-     "code":"#6495ED",
-  },
-  {
-     "name":"costa del sol",
-     "code":"#625932",
-  },
-  {
-     "name":"Delphinium Blue",
-     "code":"#6198AE",
-  },
-  {
-     "name":"meadowbrook",
-     "code":"#60A0A3",
-  },
-  {
-     "name":"Glaucous",
-     "code":"#6082B6",
-  },
-  {
-     "name":"waikawa gray",
-     "code":"#5A6E9C",
-  },
-  {
-     "name":"Caput Mortuum Brown",
-     "code":"#592720",
-  },
-  {
-     "name":"Blue Zircon",
-     "code":"#57FEFF",
-  },
-  {
-     "name":"Stoplight Go Green",
-     "code":"#57E964",
-  },
-  {
-     "name":"NYU Violet",
-     "code":"#57068c",
-  },
-  {
-     "name":"Faux-Medium aquamarine",
-     "code":"#55e19e",
-  },
-  {
-     "name":"dark olive green",
-     "code":"#556B2F",
-  },
-  {
-     "name":"Goose Turd Green",
-     "code":"#54FFA2",
-  },
-  {
-     "name":"bossanova",
-     "code":"#4C3262",
-  },
-  {
-     "name":"indigo",
-     "code":"#4B0082",
-  },
-  {
-     "name":"Smaragdine",
-     "code":"#4A9976",
-  },
-  {
-     "name":"Moss Green",
-     "code":"#4A5D23",
-  },
-  {
-     "name":"drab dark brown",
-     "code":"#4A412A",
-  },
-  {
-     "name":"Hippie green",
-     "code":"#468647",
-  },
-  {
-     "name":"bulgarian rose",
-     "code":"#460709",
-  },
-  {
-     "name":"Bronze olive",
-     "code":"#443909",
-  },
-  {
-     "name":"Black Cat",
-     "code":"#413839",
-  },
-  {
-     "name":"Signal Blue",
-     "code":"#3E8EDE",
-  },
-  {
-     "name":"iridium",
-     "code":"#3D3C3A",
-  },
-  {
-     "name":"Arsenic",
-     "code":"#3B444B",
-  },
-  {
-     "name":"bleached cedar",
-     "code":"#352442",
-  },
-  {
-     "name":"mediterranea",
-     "code":"#32575D",
-  },
-  {
-     "name":"rangitoto",
-     "code":"#323527",
-  },
-  {
-     "name":"Illuminating Emerald",
-     "code":"#319177",
-  },
-  {
-     "name":"ylnmn blue",
-     "code":"#2E5090",
-  },
-  {
-     "name":"Zinnwaldite Brown",
-     "code":"#2C1608",
-  },
-  {
-     "name":"Isle Of Man Green",
-     "code":"#22CE83",
-  },
-  {
-     "name":"te papa green",
-     "code":"#1E433C",
-  },
-  {
-     "name":"midnight blue",
-     "code":"#191970",
-  },
-  {
-     "name":"chathams blue",
-     "code":"#175579",
-  },
-  {
-     "name":"International Klein Blue",
-     "code":"#130a8f",
-  },
-  {
-     "name":"Japanese laurel",
-     "code":"#0E860E",
-  },
-  {
-     "name":"aqua",
-     "code":"#00FFFF",
-  },
-  {
-     "name":"lime",
-     "code":"#00FF00",
-  },
-  {
-     "name":"medium spring green",
-     "code":"#00FA9A",
-  },
-  {
-     "name":"caribbean green",
-     "code":"#00CC99",
-  },
-  {
-     "name":"Viridian",
-     "code":"#009B7D",
-  },
-  {
-     "name":"teal",
-     "code":"#008080",
-  },
-  {
-     "name":"Ao",
-     "code":"#008000",
-  },
-  {
-     "name":"green",
-     "code":"#008000",
-  },
-  {
-     "name":"azure radiance",
-     "code":"#007FFF",
-  },
-  {
-     "name":"Skobeloff",
-     "code":"#007474",
-  },
-  {
-     "name":"british racing green",
-     "code":"#004225",
-  },
-  {
-     "name":"Samco Blue",
-     "code":"#0002FF",
-  },
-  {
-     "name":"blue",
-     "code":"#0000FF",
-  },
-  {
-     "name":"navy",
-     "code":"#000080",
-  },
-  {
-     "name":"black",
-     "code":"#000000",
-  }
-];
-
-let colorList = [];
+var colorList = [];
+var colors = {"colors":[]};
 var questions = 0, correct = 0;
 var curColor = null;
 var colorDiv = null;
@@ -746,9 +24,13 @@ var prevKeys = ["ArrowLeft", "Backspace"]
 
 var startTime = null, finalTime = null;
 
-let timerInterval = null;
+var timerInterval = null;
 
 var baseURL = null;
+
+var barShown = false;
+
+var packs = [];
 
 class LetterBox extends HTMLElement {
   constructor() {
@@ -863,11 +145,9 @@ function FormatTime(diff) {
 }
 function TimerChange() {
   document.getElementById("timerBox").innerHTML = FormatTime(new Date() - startTime);
-  // console.log(new Date() - startTime);
 }
 
 function RevealLetter(){
-  console.log(Math.ceil(totalLetters.length * .33));
   if(totalLetters.length - revealedLetters.length <= Math.max(2, Math.ceil(totalLetters.length * .33))){
     return;
   }
@@ -926,8 +206,6 @@ function EndGame(){
   document.getElementById("main").hidden = true;
   document.getElementById("done").hidden = false;
 
-  console.log(`totalLettersRevealed:${totalLettersRevealed}`);
-
   document.getElementById("incorrect").innerHTML = `You had ${incorrect} incorrect colors out of ${totalQuestions}`
   document.getElementById("correct").innerHTML = `You had ${correct} correct colors out of ${totalQuestions}`
   document.getElementById("realTime").innerHTML = `Real time: ${actualTime}`
@@ -939,8 +217,6 @@ function EndGame(){
   correctSlider.max = totalQuestions;
   correctSlider.value = correct;
 }
-
-var barShown = false;
 
 function HideBar(){
   let bar = document.getElementById("topBar");
@@ -954,7 +230,7 @@ function HideBar(){
 
 function GenColor(){
   const bgCenter = "rgba(0, 0, 0, .3)";
-  if(colorList.length == (colors.length - totalQuestions)){
+  if(colorList.length == (colors.colors.length - totalQuestions)){
     GoTo("results");
     return;
   }
@@ -968,6 +244,7 @@ function GenColor(){
   colorDiv.style.backgroundColor = curColor.code;
   revealedLetters = [];
   totalLetters = [];
+  packs = [];
 
   for(let i = 0; i < curColor.name.length; i++){
     let char = curColor.name[i];
@@ -980,7 +257,36 @@ function GenColor(){
   
   DrawWord();
 
-  document.getElementById("colorCount").innerHTML = `${colors.length-colorList.length}/${colors.length}`
+  document.getElementById("colorCount").innerHTML = `${colors.colors.length-colorList.length}/${totalQuestions}`
+}
+
+function GetJson(pack){
+  const request = new XMLHttpRequest();
+  request.open("GET", "/ColorPacks/" + pack, false); // `false` makes the request synchronous
+  request.send(null);
+  if (request.status === 200) {
+    return request.responseText;
+  }
+  return null;
+}
+
+function GetPacks(){
+  colors = {"colors":[]};
+  packs = [];
+  if(document.getElementById("og").checked){
+    packs.push("og.json");
+  }
+  if(document.getElementById("firstExpansion").checked){
+    packs.push("firstExpansion.json");
+  }
+  for(const pack in packs){
+    let tmp = JSON.parse(GetJson(packs[pack]));
+    if(tmp){
+      for(let i = 0; i < tmp.colors.length; i++){
+        colors.colors.push(tmp.colors[i]);
+      }
+    }
+  }
 }
 
 function OnLoad(){
@@ -991,18 +297,6 @@ function OnLoad(){
   colorDiv = document.getElementById("colorBox")
   answerBox = document.getElementById("answerBox")
 
-  let title = document.getElementById("titleBar");
-  let tmp = "background-image: radial-gradient(";
-  for(let i = 0; i < colors.length; i++){
-    if(i != 0)tmp += ", ";
-    tmp += `${colors[i].code}`;
-  }
-  tmp += ");"
-  
-  document.getElementById("title").style = tmp;
-  title.style = tmp;
-
-  document.getElementById("qNum").max = colors.length;
   let penaltyPopup = document.getElementById("penaltyPopup");
   let penaltyText = document.getElementById("penalty");
   penaltyText.addEventListener("mouseenter", function(){
@@ -1022,13 +316,14 @@ function GoTo(hash){
 }
 
 function Start(){
-  colorList = colors;
+  GetPacks();
+  colorList = colors.colors;
   correct = 0; 
   incorrect = 0; 
   lateCorrect = 0;
   totalLettersRevealed = 0;
 
-  totalQuestions = document.getElementById("qNum").value;
+  totalQuestions = colors.colors.length;
   GenColor()
 
   document.getElementById("home").hidden = true;
@@ -1062,7 +357,6 @@ function GiveUp(){
 function Check(){
   let text = ReadBoxes();
   if(text.length != curColor.name.replace(/\s+/g, '').length){
-    console.log(text.length)
     return;
   }
   CheckAnswer(text);
@@ -1089,7 +383,7 @@ function CheckAnswer(text){
 
 window.addEventListener('hashchange', function (e) {
   var hash = window.location.hash;
-  console.log(hash);
+  
   if(hash === '#results'){
     document.getElementById("home").hidden = true;
     document.getElementById("done").hidden = false;

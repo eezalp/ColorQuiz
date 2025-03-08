@@ -1,71 +1,74 @@
 <head>
   <link rel="stylesheet" href="style.css">
+  <title>Color Quiz</title>
 </head>
 
 <body onload="OnLoad()">
   <script src="script.js"></script>
-  <div class="background">
-    <div id="home" class="home">
-      <div class="titleBar" id="titleBar">
-        <h1 id="title" class="title">Color Quiz</h1>
+  <div id="home" class="home">
+    <div class="titleBar" id="titleBar">
+      <h1 id="title" class="title">Color Quiz</h1>
+    </div>
+    <div class="settings">
+      <h1 id="settingsTitle" class="segmentTitle">Quiz Settings</h1>
+      
+      <div class="packSelector">
+        <h2>Select your color pool</h2>
+        <label class="packLabel"><input type="checkbox" class="packCheckbox" id="og" checked disabled></input>OG Colors</label>
+        <label class="packLabel"><input type="checkbox" class="packCheckbox" id="firstExpansion"></input>Release Expansion</label>
       </div>
-      <div class="settings">
-        <h1 id="settingsTitle" class="segmentTitle">Quiz Settings</h1>
-        <label class="qNumLabel">Question Count: <input id="qNum" class="qNum" type="number" value="180"></label>
+      
+      
+      <a href="#game">
+        <button class="startBut">Start</button>
+      </a>
+    </div>
+  </div>
+  <div id="main" class="main" hidden>
+
+    <div class="questionBox">
+      <div class="topBar" id="topBar">
+        <h2 id="timerBox" class="topBarText"></h2>
+        <h2 id="colorCount" class="topBarText">0/300</h4>
+        <button id="topBarBut" class="topBarDrawer" onclick="HideBar()"></button>
+      </div>
+      <h1 class="question" id="question">What color is this?</h1>
+    </div>
+
+    <div id="colorBox" class="colorBox">
+      <div class="colorBoxBorder"></div>
+    </div>
+
+    <div class="midBar">
+      <div id="answerBox" class="answerBox"></div>
+      <div class="buttonBox">
+        <input type="button" value="Check" class="button" onclick="ButtonCheck()">
+        <input type="button" value="Give Up" class="button" onclick="GiveUp()">
+      </div>
+    </div>
+
+  </div>
+  <div id="done" class="done" hidden>
+    <h1 class="segmentTitle">Results</h1>
+    <h3 id="incorrect" class="incorrect">You had 130 incorrect colors out of 180</h3>
+    <input type="range" id="incorrectSlider" class="incorrectSlider" min=0 disabled>
+    <h3 id="correct" class="correct">You had 50 correct colors out of 180</h3>
+    <input type="range"  id="correctSlider" class="correctSlider" min=0 disabled>
+    <div class="timeSummary">
+      <h2 id="realTime" class="summary">Real time: 00:00:00</h2>
+      
+      <div class="hoverPopup penaltyPopup popupDisabled" id="penaltyPopup">
+        <p class="popupText">A 10 second penalty is granted for every hint letter you receive</p>
+      </div>
+      
+      <h2 id="penalty" class="summary">Penalty: 00:00:00</h2>
+      <div class="rectangle">
         
-        <a href="#game">
-          <button class="startBut" onclick="Start()">Start</button>
-        </a>
       </div>
+      <h2 id="total" class="summary">Total Time: 00:00:00</h2>
     </div>
-    <div id="main" class="main" hidden>
-
-      <div class="questionBox">
-        <div class="topBar" id="topBar">
-          <h2 id="timerBox" class="topBarText"></h2>
-          <h2 id="colorCount" class="topBarText">0/300</h4>
-          <button id="topBarBut" class="topBarDrawer" onclick="HideBar()"></button>
-        </div>
-        <h1 class="question" id="question">What color is this?</h1>
-      </div>
-
-      <div id="colorBox" class="colorBox">
-        <div class="colorBoxBorder"></div>
-      </div>
-
-      <div class="midBar">
-        <div id="answerBox" class="answerBox"></div>
-        <div class="buttonBox">
-          <input type="button" value="Check" class="button" onclick="ButtonCheck()">
-          <input type="button" value="Give Up" class="button" onclick="GiveUp()">
-        </div>
-      </div>
-
-    </div>
-    <section name="results" hidden>
-      <div id="done" class="done">
-        <h1 class="segmentTitle">Results</h1>
-        <h3 id="incorrect" class="incorrect">You had 130 incorrect colors out of 180</h3>
-        <input type="range" id="incorrectSlider" class="incorrectSlider" min=0 disabled>
-        <h3 id="correct" class="correct">You had 50 correct colors out of 180</h3>
-        <input type="range"  id="correctSlider" class="correctSlider" min=0 disabled>
-        <div class="timeSummary">
-          <h2 id="realTime" class="summary">Real time: 00:00:00</h2>
-          
-          <div class="hoverPopup penaltyPopup popupDisabled" id="penaltyPopup">
-            <p class="popupText">A 10 second penalty is granted for every hint letter you receive</p>
-          </div>
-          
-          <h2 id="penalty" class="summary">Penalty: 00:00:00</h2>
-          <div class="rectangle">
-            
-          </div>
-          <h2 id="total" class="summary">Total Time: 00:00:00</h2>
-        </div>
-        <a href="#home">
-        <button class="goHome">Try Again</button>
-        </a>
-      </div>
-    </section>
+    <a href="#home">
+    <button class="goHome">Try Again</button>
+    </a>
   </div>
 </body>
