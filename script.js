@@ -284,7 +284,7 @@ function GenColor(){
 
 function GetJson(pack){
   const request = new XMLHttpRequest();
-  request.open("GET", "bdcolorquiz.netlify.app/ColorPacks/" + pack, false); // `false` makes the request synchronous
+  request.open("GET", "/ColorPacks/" + pack, false); // `false` makes the request synchronous
   request.send(null);
   if (request.status === 200) {
     return request.responseText;
