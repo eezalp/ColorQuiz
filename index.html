@@ -12,16 +12,34 @@
     <div class="settings">
       <h1 id="settingsTitle" class="segmentTitle">Quiz Settings</h1>
       
-      <div class="packSelector">
-        <h2>Select your color pool</h2>
-        <label class="packLabel"><input type="checkbox" class="packCheckbox" id="og" checked disabled></input>OG Colors</label>
-        <label class="packLabel"><input type="checkbox" class="packCheckbox" id="firstExpansion"></input>Release Expansion</label>
-      </div>
+      <!-- <div class="packSelector"> -->
+      <!-- <section class="packs"> -->
+        <h2>Select your color list</h2>
+        <!-- <label class="packLabel"><input type="checkbox" class="packCheckbox" id="og" checked disabled></input>OG Colors</label>
+        <label class="packLabel"><input type="checkbox" class="packCheckbox" id="firstExpansion"></input>Release Expansion</label> -->
+        <div class="selector">
+          <div class="listButtons">
+            <div class="listButton listButtonSelected" id="beta">Beta</div>
+            <div class="listButton listButtonDeselected" id="release">Release</div>
+          </div>
+          <div class="displays">
+            <div class="listDisplay" id="betaDisplay">
+              <p>✔️ OG Colors</p>
+              <p>❌ Release Colors</p>
+            </div>
+            <div class="listDisplay" id="releaseDisplay" hidden>
+              <p>✔️ OG Colors</p>
+              <p>✔️ Release Colors</p>
+            </div>
+          </div>
+        </div>
+      <!-- </section> -->
+      <!-- </div> -->
+      <input class="name" id="nameSelctor" type="text" placeholder="Enter a Name">
       
-      
-      <a href="#game">
-        <button class="startBut">Start</button>
-      </a>
+      <!-- <a href="#game"> -->
+        <button class="startBut" onclick="StartBut()">Start</button>
+      <!-- </a> -->
     </div>
   </div>
   <div id="main" class="main" hidden>

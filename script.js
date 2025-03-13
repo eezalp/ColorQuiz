@@ -32,6 +32,16 @@ var barShown = false;
 
 var packs = [];
 
+var listButs = {};
+var listDisp = {};
+
+var betaListBut = null, betaListDisp = null;
+var releaseListBut = null, releaseListDisp = null;
+
+var curList = "beta";
+
+var name = "dsa";
+
 class LetterBox extends HTMLElement {
   constructor() {
     super();
@@ -197,9 +207,10 @@ function EndGame(){
   let incorrectSlider = document.getElementById("incorrectSlider");
   let correctSlider = document.getElementById("correctSlider");
   let percent = (correct/totalQuestions) * 100;
+  let endTime = new Date();
   let extraTime = FormatTime(totalLettersRevealed * 10000);
-  let actualTime = FormatTime(new Date() - startTime);
-  finalTime = FormatTime((new Date() - startTime) + (totalLettersRevealed * 10000));
+  let actualTime = FormatTime(endTime - startTime);
+  finalTime = FormatTime((endTime - startTime) + (totalLettersRevealed * 10000));
 
   // document.body.style = `background-image: linear-gradient(.25turn, #000000, #EEEEEE, #000000);`;
   clearInterval(timerInterval);
@@ -216,6 +227,17 @@ function EndGame(){
   incorrectSlider.value = incorrect;
   correctSlider.max = totalQuestions;
   correctSlider.value = correct;
+
+  if(name){
+    switch(curList){
+      case "beta":
+        fetch(`https://cqlb.netlify.app/.netlify/functions/write_og?name=${name}&percent=${percent}&time=${(endTime - startTime) + (totalLettersRevealed * 10000)}&hints=${guesses}`);
+        break;
+      case "release":
+        fetch(`https://cqlb.netlify.app/.netlify/functions/write_release?name=${name}&percent=${percent}&time=${(endTime - startTime) + (totalLettersRevealed * 10000)}&hints=${guesses}`);
+        break;
+    }
+  }
 }
 
 function HideBar(){
@@ -273,11 +295,13 @@ function GetJson(pack){
 function GetPacks(){
   colors = {"colors":[]};
   packs = [];
-  if(document.getElementById("og").checked){
-    packs.push("og.json");
-  }
-  if(document.getElementById("firstExpansion").checked){
-    packs.push("firstExpansion.json");
+  switch(curList){
+    case "beta":
+      packs = ["beta.json"];
+      break;
+    case "release":
+      packs = ["beta.json", "release.json"];
+      break;
   }
   for(const pack in packs){
     let tmp = JSON.parse(GetJson(packs[pack]));
@@ -294,6 +318,39 @@ function OnLoad(){
     window.location.href = window.location.href.split('#')[0];
   }
   baseURL = window.location.href.split('#')[0];
+
+    
+  listButs.beta = document.getElementById("beta"); 
+  listDisp.beta = document.getElementById("betaDisplay");
+  listButs.release = document.getElementById("release"); 
+  listDisp.release = document.getElementById("releaseDisplay");
+
+  for(const key in listDisp){
+    listDisp[key].hidden = true;
+  }
+  listDisp.beta.hidden = false;
+
+  for(const key in listButs){
+    listButs[key].addEventListener("click", function(){
+      if(this.classList.contains("listButtonDeselected")){
+        for(const key_ in listButs){
+          listButs[key_].classList.add("listButtonDeselected");
+          listButs[key_].classList.remove("listButtonSelected");
+        }
+        for(const key2 in listDisp){
+          listDisp[key2].hidden = !(key2 == key);
+        }
+        this.classList.remove("listButtonDeselected");
+        this.classList.add("listButtonSelected");
+        curList = key;
+      }
+    });
+    listButs[key].classList.add("listButtonDeselected");
+    listButs[key].classList.remove("listButtonSelected");
+  }
+  listButs.beta.classList.remove("listButtonDeselected");
+  listButs.beta.classList.add("listButtonSelected");
+
   colorDiv = document.getElementById("colorBox")
   answerBox = document.getElementById("answerBox")
 
@@ -309,6 +366,19 @@ function OnLoad(){
   });
 
   GoTo("home");
+}
+
+function StartBut(){
+  name = document.getElementById("nameSelctor").value;
+  if(!name){
+    if(confirm("You are going to start without a name. Your score will not be saved. Continue?")){
+      GoTo("game");
+    }else{
+      document.getElementById("nameSelctor").focus();
+    }
+  }else{
+    GoTo("game");
+  }
 }
 
 function GoTo(hash){
