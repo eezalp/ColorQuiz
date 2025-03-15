@@ -420,7 +420,7 @@ function Start(){
 function ToHome(){
 
   let obLB = document.getElementById("LBOG");
-  let obDat = LoadLBPage(0, "ob");
+  let obDat = LoadLBPage(0, "og");
   console.log(obDat);
   obDat = JSON.parse(obDat);
   let setForDeletion = obLB.lastChild;
