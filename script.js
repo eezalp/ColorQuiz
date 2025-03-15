@@ -35,6 +35,9 @@ var packs = [];
 var listButs = {};
 var listDisp = {};
 
+var colorTimes = [];
+var colorStart = 0;
+
 var betaListBut = null, betaListDisp = null;
 var releaseListBut = null, releaseListDisp = null;
 
@@ -147,6 +150,10 @@ class LetterBox extends HTMLElement {
 };
 customElements.define('letter-box', LetterBox);
 
+function LoadLBPage(page, loc){
+  fetch(`https://cqlb.netlify.app/.netlify/functions/read_${loc}?page=${page}`);
+}
+
 function FormatTime(diff) {
   const minutes = String(Math.floor((diff / (1000 * 60)) % 60)).padStart(2, '0');
   const seconds = String(Math.floor((diff / 1000) % 60)).padStart(2, '0');
@@ -228,16 +235,24 @@ function EndGame(){
   correctSlider.max = totalQuestions;
   correctSlider.value = correct;
 
+  console.log(colorTimes);
+  const max = colorTimes.reduce(function(prev, current) {
+    return (prev && prev.time > current.time) ? prev : current
+  })
+
+  console.log(`Longest color was ${max.code} with a time of ${max.time}`);
+
   if(name){
     switch(curList){
       case "beta":
-        fetch(`https://cqlb.netlify.app/.netlify/functions/write_og?name=${name}&percent=${percent}&time=${(endTime - startTime) + (totalLettersRevealed * 10000)}&hints=${guesses}`);
+        fetch(`https://cqlb.netlify.app/.netlify/functions/write_og?name=${name}&percent=${percent}&time=${(endTime - startTime) + (totalLettersRevealed * 10000)}&hints=${guesses}&slowColor=${max.code.substring(1)}`);
         break;
       case "release":
-        fetch(`https://cqlb.netlify.app/.netlify/functions/write_release?name=${name}&percent=${percent}&time=${(endTime - startTime) + (totalLettersRevealed * 10000)}&hints=${guesses}`);
+        fetch(`https://cqlb.netlify.app/.netlify/functions/write_release?name=${name}&percent=${percent}&time=${(endTime - startTime) + (totalLettersRevealed * 10000)}&hints=${guesses}&slowColor=${max.code.substring(1)}`);
         break;
     }
   }
+
 }
 
 function HideBar(){
@@ -280,6 +295,7 @@ function GenColor(){
   DrawWord();
 
   document.getElementById("colorCount").innerHTML = `${colors.colors.length-colorList.length}/${totalQuestions}`
+  colorStart = new Date();
 }
 
 function GetJson(pack){
@@ -402,8 +418,64 @@ function Start(){
   timerInterval = setInterval(TimerChange, 10);
 }
 function ToHome(){
-  document.getElementById("home").hidden = false;
-  document.getElementById("done").hidden = true;
+  let setForDeletion = obLB.lastChild;
+
+  let obLB = document.getElementById("LBOG");
+  let obDat = JSON.parse(LoadLBPage(0, "ob"));
+  while(setForDeletion){
+    setForDeletion.remove();
+    setForDeletion = obLB.lastChild;
+  }
+
+  for(let i = 0; i < 3; i++){
+    let entry = obDat.result.data[i];
+    if(entry){
+      let tr = document.createElement("tr");
+      let th = document.createElement("th");
+      tr.style = `background-color: ${entry[4]};`;
+
+      th.scope = "row";
+      th.classList.add("row");
+      th.innerHTML = `${i + 1})`;
+
+      for(let _ = 0; _ < 4; _++){
+        let td = document.createElement("td");
+        td.innerHTML = entry[_];
+        th.appendChild(td);
+      }
+
+      tr.appendChild(th);
+    }
+  }
+
+  let rlLB = document.getElementById("LBRL");
+  let rlDat = JSON.parse(LoadLBPage(0, "release"));
+  setForDeletion = rlLB.lastChild;
+  while(setForDeletion){
+    setForDeletion.remove();
+    setForDeletion = rlLB.lastChild;
+  }
+
+  for(let i = 0; i < 3; i++){
+    let entry = obDat.result.data[i];
+    if(entry){
+      let tr = document.createElement("tr");
+      let th = document.createElement("th");
+      tr.style = `background-color: ${entry[4]};`;
+
+      th.scope = "row";
+      th.classList.add("row");
+      th.innerHTML = `${i + 1})`;
+
+      for(let _ = 0; _ < 4; _++){
+        let td = document.createElement("td");
+        td.innerHTML = entry[_];
+        th.appendChild(td);
+      }
+
+      tr.appendChild(th);
+    }
+  }
 }
 
 function ReadBoxes(){
@@ -440,6 +512,12 @@ function CheckAnswer(text){
       correctGuesses++;
       if(guesses <= 15) lateCorrect++;
       totalLettersRevealed += Math.max(revealedLetters.length - 1, 0);
+      colorTimes.push(
+        {
+          "code": curColor.code,
+          "time": new Date() - colorStart
+        }
+      );
     }else{
       incorrect++;
       incorrectGuesses++;
@@ -461,7 +539,7 @@ window.addEventListener('hashchange', function (e) {
     EndGame();
   }else if(hash === '#home'){
     if(timerInterval) clearInterval(timerInterval);
-    // ToHome();
+    ToHome();
     document.getElementById("home").hidden = false;
     document.getElementById("done").hidden = true;
     document.getElementById("main").hidden = true;
