@@ -420,7 +420,9 @@ function Start(){
 function ToHome(){
 
   let obLB = document.getElementById("LBOG");
-  let obDat = JSON.parse(LoadLBPage(0, "ob"));
+  let obDat = LoadLBPage(0, "ob");
+  console.log(obDat);
+  obDat = JSON.parse(obDat);
   let setForDeletion = obLB.lastChild;
   while(setForDeletion){
     setForDeletion.remove();
@@ -449,7 +451,9 @@ function ToHome(){
   }
 
   let rlLB = document.getElementById("LBRL");
-  let rlDat = JSON.parse(LoadLBPage(0, "release"));
+  let rlDat = LoadLBPage(0, "release");
+  console.log(rlDat);
+  rlDat = JSON.parse(rlDat);
   setForDeletion = rlLB.lastChild;
   while(setForDeletion){
     setForDeletion.remove();
