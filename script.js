@@ -150,8 +150,17 @@ class LetterBox extends HTMLElement {
 };
 customElements.define('letter-box', LetterBox);
 
-function LoadLBPage(page, loc){
-  fetch(`https://cqlb.netlify.app/.netlify/functions/read_${loc}?page=${page}`);
+async function LoadLBPage(page, loc) {
+  try {
+    const resp = await fetch(`https://cqlb.netlify.app/.netlify/functions/read_${loc}?page=${page}`);
+    // console.log(resp);
+    const json = await resp.json();
+    // console.log(json);
+    return json;
+  } catch (error) {
+    console.error("Error fetching data:", error);
+    return null;
+  }
 }
 
 function FormatTime(diff) {
@@ -420,66 +429,69 @@ function Start(){
 function ToHome(){
 
   let obLB = document.getElementById("LBOG");
-  let obDat = LoadLBPage(0, "og");
-  console.log(obDat);
-  obDat = JSON.parse(obDat);
-  let setForDeletion = obLB.lastChild;
-  while(setForDeletion){
-    setForDeletion.remove();
-    setForDeletion = obLB.lastChild;
-  }
-
-  for(let i = 0; i < 3; i++){
-    let entry = obDat.result.data[i];
-    if(entry){
-      let tr = document.createElement("tr");
-      let th = document.createElement("th");
-      tr.style = `background-color: ${entry[4]};`;
-
-      th.scope = "row";
-      th.classList.add("row");
-      th.innerHTML = `${i + 1})`;
-
-      for(let _ = 0; _ < 4; _++){
-        let td = document.createElement("td");
-        td.innerHTML = entry[_];
-        th.appendChild(td);
-      }
-
-      tr.appendChild(th);
+  LoadLBPage(0, "og").then(dat => {
+    console.log(dat);
+    let setForDeletion = obLB.lastChild;
+    while(setForDeletion){
+      setForDeletion.remove();
+      setForDeletion = obLB.lastChild;
     }
-  }
+  
+    for(let i = 0; i < 3; i++){
+      let entry = dat.result.data[i];
+      if(entry){
+        let tr = document.createElement("tr");
+        let th = document.createElement("th");
+        tr.style = `background-color: ${entry[4]};`;
+  
+        th.scope = "row";
+        th.classList.add("row");
+        th.innerHTML = `${i + 1})`;
+  
+        tr.appendChild(th);
+  
+        for(let _ = 0; _ < 4; _++){
+          let td = document.createElement("td");
+          td.innerHTML = entry[_];
+          tr.appendChild(td);
+        }
+        obLB.appendChild(tr);
+      }
+    }
+  });
+  
 
   let rlLB = document.getElementById("LBRL");
-  let rlDat = LoadLBPage(0, "release");
-  console.log(rlDat);
-  rlDat = JSON.parse(rlDat);
-  setForDeletion = rlLB.lastChild;
-  while(setForDeletion){
-    setForDeletion.remove();
-    setForDeletion = rlLB.lastChild;
-  }
-
-  for(let i = 0; i < 3; i++){
-    let entry = rlDat.result.data[i];
-    if(entry){
-      let tr = document.createElement("tr");
-      let th = document.createElement("th");
-      tr.style = `background-color: ${entry[4]};`;
-
-      th.scope = "row";
-      th.classList.add("row");
-      th.innerHTML = `${i + 1})`;
-
-      for(let _ = 0; _ < 4; _++){
-        let td = document.createElement("td");
-        td.innerHTML = entry[_];
-        th.appendChild(td);
-      }
-
-      tr.appendChild(th);
+  LoadLBPage(0, "release").then(dat => {
+    console.log(dat);
+    let setForDeletion = rlLB.lastChild;
+    while(setForDeletion){
+      setForDeletion.remove();
+      setForDeletion = rlLB.lastChild;
     }
-  }
+  
+    for(let i = 0; i < 3; i++){
+      let entry = dat.result.data[i];
+      if(entry){
+        let tr = document.createElement("tr");
+        let th = document.createElement("th");
+        tr.style = `background-color: ${entry[4]};`;
+  
+        th.scope = "row";
+        th.classList.add("row");
+        th.innerHTML = `${i + 1})`;
+  
+        tr.appendChild(th);
+  
+        for(let _ = 0; _ < 4; _++){
+          let td = document.createElement("td");
+          td.innerHTML = entry[_];
+          tr.appendChild(td);
+        }
+        rlLB.appendChild(tr);
+      }
+    }
+  });
 }
 
 function ReadBoxes(){

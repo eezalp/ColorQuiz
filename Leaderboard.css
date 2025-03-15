@@ -7,6 +7,8 @@
 }
 .row{
   width: auto;
+  filter: invert(1);
+  mix-blend-mode: difference;
 }
 .lbHead{
   background-color: rgb(20, 20, 20);
@@ -17,4 +19,6 @@
 }
 td{
   text-align: center;
+  filter: invert(1);
+  mix-blend-mode: difference;
 }
