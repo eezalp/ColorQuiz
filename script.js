@@ -418,10 +418,10 @@ function Start(){
   timerInterval = setInterval(TimerChange, 10);
 }
 function ToHome(){
-  let setForDeletion = obLB.lastChild;
 
   let obLB = document.getElementById("LBOG");
   let obDat = JSON.parse(LoadLBPage(0, "ob"));
+  let setForDeletion = obLB.lastChild;
   while(setForDeletion){
     setForDeletion.remove();
     setForDeletion = obLB.lastChild;
@@ -457,7 +457,7 @@ function ToHome(){
   }
 
   for(let i = 0; i < 3; i++){
-    let entry = obDat.result.data[i];
+    let entry = rlDat.result.data[i];
     if(entry){
       let tr = document.createElement("tr");
       let th = document.createElement("th");
