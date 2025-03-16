@@ -17,11 +17,11 @@
           <div class="listButtons">
             <div class="listButton listButtonSelected" id="beta">Beta</div>
             <div class="listButton listButtonDeselected" id="release">Release</div>
+            <div class="listButton listButtonDeselected" id="green">Green</div>
           </div>
           <div class="displays">
             <div class="listDisplay" id="betaDisplay">
               <p>✔️ OG Colors</p>
-              <p>❌ Release Colors</p>
               <table class="leaderboard" cellspacing="0">
                 <thead class="lbHead">
                   <tr>
@@ -32,7 +32,7 @@
                     <th scope="col">Hints</th>
                   </tr>
                 </thead>
-                <tbody id="LBOG" class="lbBody">
+                <tbody id="LBbeta" class="lbBody">
                 </tbody>
                 <tfoot>
 
@@ -52,7 +52,7 @@
                     <th scope="col">Hints</th>
                   </tr>
                 </thead>
-                <tbody id="LBRL" class="lbBody">
+                <tbody id="LBrelease" class="lbBody">
                   <tr style="background-color: #423653;">
                     <th scope="row" class="row">1st</th>
                     <td>Dennis</td>
@@ -74,6 +74,25 @@
                     <td>0:23:54</td>
                     <td>2</td>
                   </tr>
+                </tbody>
+                <tfoot>
+
+                </tfoot>
+              </table>
+            </div>
+            <div class="listDisplay" id="greenDisplay" hidden>
+              <p>✔️ Green Pack</p>
+              <table class="leaderboard" cellspacing="0">
+                <thead class="lbHead">
+                  <tr>
+                    <th scope="col">Placement</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Percent</th>
+                    <th scope="col">Time</th>
+                    <th scope="col">Hints</th>
+                  </tr>
+                </thead>
+                <tbody id="LBgreen" class="lbBody">
                 </tbody>
                 <tfoot>
 
