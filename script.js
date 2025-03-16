@@ -329,6 +329,8 @@ function GetPacks(){
     case "release":
       packs = ["beta.json", "release.json"];
       break;
+    default:
+      packs = [`${curList}.json`];
   }
   for(const pack in packs){
     let tmp = JSON.parse(GetJson(packs[pack]));
