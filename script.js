@@ -152,9 +152,20 @@ class LetterBox extends HTMLElement {
 };
 customElements.define('letter-box', LetterBox);
 
-async function LoadLBPage(page, sheetName, sheetId){
+function GetSheetID(sheetName){
+  switch(sheetName){
+    case "beta":
+      return "0";
+    case "release":
+      return "1224037775";
+    case "green":
+      return "134754221";
+  }
+}
+
+async function LoadLBPage(page, sheetName){
   try {
-    const resp = await fetch(`https://cqlb.netlify.app/.netlify/functions/read?page=${page}&sheetName=${sheetName}&sheetId=${sheetId}`);
+    const resp = await fetch(`https://cqlb.netlify.app/.netlify/functions/read?page=${page}&sheetName=${sheetName}&sheetId=${GetSheetID(sheetName)}`);
     // console.log(resp);
     const json = await resp.json();
     // console.log(json);
@@ -163,6 +174,10 @@ async function LoadLBPage(page, sheetName, sheetId){
     console.error("Error fetching data:", error);
     return null;
   }
+}
+
+async function WriteScore(name, percent, time, hints, slowColor, sheetName){
+  fetch(`https://cqlb.netlify.app/.netlify/functions/write?name=${name}&percent=${percent}&time=${time}&hints=${hints}&slowColor=${slowColor}&sheetName=${sheetName}&sheetId=${GetSheetID(sheetName)}`);
 }
 
 function FormatTime(diff) {
@@ -246,7 +261,6 @@ function EndGame(){
   correctSlider.max = totalQuestions;
   correctSlider.value = correct;
 
-  console.log(colorTimes);
   const max = colorTimes.reduce(function(prev, current) {
     return (prev && prev.time > current.time) ? prev : current
   })
@@ -254,14 +268,7 @@ function EndGame(){
   console.log(`Longest color was ${max.code} with a time of ${max.time}`);
 
   if(name){
-    switch(curList){
-      case "beta":
-        fetch(`https://cqlb.netlify.app/.netlify/functions/write_og?name=${name}&percent=${percent}&time=${(endTime - startTime) + (totalLettersRevealed * 10000)}&hints=${guesses}&slowColor=${max.code.substring(1)}`);
-        break;
-      case "release":
-        fetch(`https://cqlb.netlify.app/.netlify/functions/write_release?name=${name}&percent=${percent}&time=${(endTime - startTime) + (totalLettersRevealed * 10000)}&hints=${guesses}&slowColor=${max.code.substring(1)}`);
-        break;
-    }
+    WriteScore(name, percent, (endTime - startTime) + (totalLettersRevealed * 10000), guesses, max.code.substring(1), curList);
   }
 
 }
