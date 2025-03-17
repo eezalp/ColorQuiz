@@ -1,6 +1,7 @@
 <head>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="Leaderboard.css">
+  <link rel="stylesheet" href="title.css">
   <title>Color Quiz</title>
 </head> 
 
@@ -8,7 +9,18 @@
   <script src="script.js"></script>
   <div id="home" class="home">
     <div class="titleBar" id="titleBar">
-      <h1 id="title" class="title">Color Quiz</h1>
+      <h1 id="title" class="title">
+        <span class="titleLetter" style="background-color: blanchedalmond;">C</span>
+        <span class="titleLetter" style="background-color: burlywood;">o</span>
+        <span class="titleLetter" style="background-color: saddlebrown;">l</span>
+        <span class="titleLetter" style="background-color: indigo;">o</span>
+        <span class="titleLetter" style="background-color: palevioletred;">r</span>
+        <span style="color: transparent; font-size: 50px;">_</span>
+        <span class="titleLetter" style="background-color: mediumseagreen;">G</span>
+        <span class="titleLetter" style="background-color: aquamarine;">a</span>
+        <span class="titleLetter" style="background-color: goldenrod;">m</span>
+        <span class="titleLetter" style="background-color: mediumaquamarine;">e</span>
+      </h1>
     </div>
     <div class="settings">
       <h1 id="settingsTitle" class="segmentTitle" style="margin-bottom: 2%;">Select your color list</h1>
@@ -17,7 +29,10 @@
           <div class="listButtons">
             <div class="listButton listButtonSelected" id="beta">Beta</div>
             <div class="listButton listButtonDeselected" id="release">Release</div>
+            <div class="listButton listButtonDeselected" id="red">Red</div>
             <div class="listButton listButtonDeselected" id="green">Green</div>
+            <div class="listButton listButtonDeselected" id="blue">Blue</div>
+            <div class="listButton listButtonDeselected" id="rgb">RGB</div>
           </div>
           <div class="displays">
             <div class="listDisplay" id="betaDisplay">
@@ -40,8 +55,7 @@
               </table>
             </div>
             <div class="listDisplay" id="releaseDisplay" hidden>
-              <p>✔️ OG Colors</p>
-              <p>✔️ Release Colors</p>
+              <p>✔️ OG Colors ✔️ Release Colors</p>
               <table class="leaderboard" cellspacing="0">
                 <thead class="lbHead">
                   <tr>
@@ -80,6 +94,25 @@
                 </tfoot>
               </table>
             </div>
+            <div class="listDisplay" id="redDisplay" hidden>
+              <p>✔️ Red Pack</p>
+              <table class="leaderboard" cellspacing="0">
+                <thead class="lbHead">
+                  <tr>
+                    <th scope="col">Placement</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Percent</th>
+                    <th scope="col">Time</th>
+                    <th scope="col">Hints</th>
+                  </tr>
+                </thead>
+                <tbody id="LBred" class="lbBody">
+                </tbody>
+                <tfoot>
+
+                </tfoot>
+              </table>
+            </div>
             <div class="listDisplay" id="greenDisplay" hidden>
               <p>✔️ Green Pack</p>
               <table class="leaderboard" cellspacing="0">
@@ -93,6 +126,44 @@
                   </tr>
                 </thead>
                 <tbody id="LBgreen" class="lbBody">
+                </tbody>
+                <tfoot>
+
+                </tfoot>
+              </table>
+            </div>
+            <div class="listDisplay" id="blueDisplay" hidden>
+              <p>✔️ Blue Pack</p>
+              <table class="leaderboard" cellspacing="0">
+                <thead class="lbHead">
+                  <tr>
+                    <th scope="col">Placement</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Percent</th>
+                    <th scope="col">Time</th>
+                    <th scope="col">Hints</th>
+                  </tr>
+                </thead>
+                <tbody id="LBblue" class="lbBody">
+                </tbody>
+                <tfoot>
+
+                </tfoot>
+              </table>
+            </div>
+            <div class="listDisplay" id="rgbDisplay" hidden>
+              <p>✔️ Red Pack ✔️ Blue Pack ✔️ Green Pack</p>
+              <table class="leaderboard" cellspacing="0">
+                <thead class="lbHead">
+                  <tr>
+                    <th scope="col">Placement</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Percent</th>
+                    <th scope="col">Time</th>
+                    <th scope="col">Hints</th>
+                  </tr>
+                </thead>
+                <tbody id="LBrgb" class="lbBody">
                 </tbody>
                 <tfoot>
 

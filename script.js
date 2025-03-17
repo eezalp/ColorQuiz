@@ -12,7 +12,7 @@ var totalLetters = [];
 
 var textBoxes = [];
 
-const groups = ["beta", "release", "green"];
+const groups = ["beta", "release", "red", "green", "blue", "rgb"];
 
 var correct = 0, incorrect = 0, lateCorrect = 0;
 var guesses = 0, incorrectGuesses = 0, correctGuesses = 0;
@@ -38,7 +38,7 @@ var listButs = {};
 var listDisp = {};
 
 var colorTimes = [];
-var colorStart = 0;
+var colorStart = null;
 
 var betaListBut = null, betaListDisp = null;
 var releaseListBut = null, releaseListDisp = null;
@@ -158,8 +158,14 @@ function GetSheetID(sheetName){
       return "0";
     case "release":
       return "1224037775";
+    case "red":
+      return "489072246";
     case "green":
       return "134754221";
+    case "blue":
+      return "463850702";
+    case "rgb":
+      return "623713731";
   }
 }
 
@@ -239,7 +245,7 @@ function Randrange(min, max){
 function EndGame(){
   let incorrectSlider = document.getElementById("incorrectSlider");
   let correctSlider = document.getElementById("correctSlider");
-  let percent = (correct/totalQuestions) * 100;
+  let percent = (correct/totalQuestions);
   let endTime = new Date();
   let extraTime = FormatTime(totalLettersRevealed * 10000);
   let actualTime = FormatTime(endTime - startTime);
@@ -285,6 +291,15 @@ function HideBar(){
 
 function GenColor(){
   const bgCenter = "rgba(0, 0, 0, .3)";
+
+  if(colorStart != null){
+    colorTimes.push(
+      {
+        "code": curColor.code,
+        "time": new Date() - colorStart
+      }
+    );
+  }
   if(colorList.length == (colors.colors.length - totalQuestions)){
     GoTo("results");
     return;
@@ -336,6 +351,9 @@ function GetPacks(){
     case "release":
       packs = ["beta.json", "release.json"];
       break;
+    case "rgb":
+      packs = ["red.json", "green.json", "blue.json"];
+      break;
     default:
       packs = [`${curList}.json`];
   }
@@ -349,6 +367,13 @@ function GetPacks(){
   }
 }
 
+function ScrollEase(e, elemen) {
+  elemen.scrollTo(0, (elemen.scrollTop + 10) - e.wheelDelta/10);
+  console.log("scrolling");
+  e.returnValue = false;
+  e.cancelBubble = true;
+  return false;
+}
 function OnLoad(){
   if(window.location.href.split('#')[1]){
     window.location.href = window.location.href.split('#')[0];
@@ -363,6 +388,9 @@ function OnLoad(){
       console.log(`${k}Display not found`)
     }
     listDisp[k].hidden = true;
+    listDisp[k].addEventListener("wheel", function(e){
+      ScrollEase(e, listDisp[k]);
+    });
 
     listButs[k].addEventListener("click", function(){
       if(this.classList.contains("listButtonDeselected")){
@@ -427,6 +455,7 @@ function Start(){
   incorrect = 0; 
   lateCorrect = 0;
   totalLettersRevealed = 0;
+  colorStart = null;;
 
   totalQuestions = colors.colors.length;
   GenColor()
@@ -449,7 +478,7 @@ function ToHome(){
         setForDeletion = LB.lastChild;
       }
     
-      for(let i = 0; i < 3; i++){
+      for(let i = 0; i < 50; i++){
         let entry = dat.data[i];
         if(entry){
           let tr = document.createElement("tr");
@@ -464,7 +493,7 @@ function ToHome(){
     
           for(let _ = 0; _ < 4; _++){
             let td = document.createElement("td");
-            td.innerHTML = entry[_];
+            td.innerHTML = _ == 2 ? FormatTime(entry[_]) : entry[_];
             tr.appendChild(td);
           }
           LB.appendChild(tr);
@@ -508,20 +537,14 @@ function CheckAnswer(text){
       correctGuesses++;
       if(guesses <= 15) lateCorrect++;
       totalLettersRevealed += Math.max(revealedLetters.length - 1, 0);
-      colorTimes.push(
-        {
-          "code": curColor.code,
-          "time": new Date() - colorStart
-        }
-      );
     }else{
       incorrect++;
       incorrectGuesses++;
     }
     
-    GenColor()
+    GenColor();
   }else{
-    DrawWord()
+    DrawWord();
   }
 }
 

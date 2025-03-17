@@ -1,0 +1,164 @@
+{
+  "colors":[
+    {
+      "name": "Aesthetic Red", 
+      "code": "#B22B27"
+    }, 
+    {
+      "name": "Arsenal Red", 
+      "code": "#EF0107"
+    }, 
+    {
+      "name": "Antique Red", 
+      "code": "#7D4F51"
+    }, 
+    {
+      "name": "Belgium Red", 
+      "code": "#EF3340"
+    }, 
+    {
+      "name": "Bills Red", 
+      "code": "#C60C30"
+    }, 
+    {
+      "name": "Boiled Red Bean Brown", 
+      "code": "#542D24"
+    }, 
+    {
+      "name": "Boy Red", 
+      "code": "#0E9CA5"
+    }, 
+    {
+      "name": "Brick Red", 
+      "code": "#CB4154"
+    }, 
+    {
+      "name": "Brownish Red", 
+      "code": "#9E3623"
+    }, 
+    {
+      "name": "Brown Red", 
+      "code": "#922B05"
+    }, 
+    {
+      "name": "Cadmium Red Deep", 
+      "code": "#E3170D"
+    }, 
+    {
+      "name": "Chestnut Red", 
+      "code": "#C34A2C"
+    }, 
+    {
+      "name": "Chinese Red", 
+      "code": "#AA381E"
+    }, 
+    {
+      "name": "Copper Red", 
+      "code": "#CB6D51"
+    }, 
+    {
+      "name": "Cypress Bark Red", 
+      "code": "#6F3028"
+    }, 
+    {
+      "name": "Dark Grayish Reddish Brown", 
+      "code": "#594242"
+    }, 
+    {
+      "name": "Deep Tuscan Red", 
+      "code": "#66424D"
+    }, 
+    {
+      "name": "Dyestalk Red", 
+      "code": "#913225"
+    }, 
+    {
+      "name": "Electric Red", 
+      "code": "#E60000"
+    }, 
+    {
+      "name": "Faith & Scars Red", 
+      "code": "#FF2013"
+    }, 
+    {
+      "name": "Faded Spicy Red Brown", 
+      "code": "#9B533F"
+    }, 
+    {
+      "name": "Fire Engine Red", 
+      "code": "#CE2029"
+    }, 
+    {
+      "name": "Fuchsia Red", 
+      "code": "#AB3475"
+    }, 
+    {
+      "name": "Guardsman Red", 
+      "code": "#952E31"
+    }, 
+    {
+      "name": "Hint Of Red", 
+      "code": "#F5EFEB"
+    }, 
+    {
+      "name": "Huawei Red", 
+      "code": "#CF0A2C"
+    }, 
+    {
+      "name": "Infra Red", 
+      "code": "#FF496C"
+    }, 
+    {
+      "name": "Lithuania Red", 
+      "code": "#C1272D"
+    }, 
+    {
+      "name": "Love Red", 
+      "code": "#E41B17"
+    }, 
+    {
+      "name": "Maximum Yellow Red", 
+      "code": "#F2BA49"
+    },
+    {
+      "name": "Middle Red Purple", 
+      "code": "#A55353"
+    },
+    {
+      "name": "Old Glory Red", 
+      "code": "#B22234"
+    },
+    {
+      "name": "Permanent Red Violet", 
+      "code": "#DB2645"
+    },
+    {
+      "name": "Philippine Red", 
+      "code": "#CE1127"
+    },
+    {
+      "name": "Pyrotect Red", 
+      "code": "#E10000"
+    },
+    {
+      "name": "Red Dirt", 
+      "code": "#7F5217"
+    },
+    {
+      "name": "Red Ochre", 
+      "code": "#9F5233"
+    },
+    {
+      "name": "Red Sienna", 
+      "code": "#5F312A"
+    },
+    {
+      "name": "Very Deep Reddish Brown", 
+      "code": "#1D0000"
+    },
+    {
+      "name": "Western Red Cedar", 
+      "code": "#7A372A"
+    }
+  ]
+}

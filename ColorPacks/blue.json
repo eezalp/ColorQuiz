@@ -1,0 +1,164 @@
+{
+  "colors":[
+    {
+      "name": "Aashay Vasani Blue", 
+      "code": "#202A44"
+    }, 
+    {
+      "name": "ACE Blue", 
+      "code": "#290177"
+    }, 
+    {
+      "name": "Agility Blue", 
+      "code": "#0077D7"
+    }, 
+    {
+      "name": "Alltricks Duck Blue", 
+      "code": "#005162"
+    }, 
+    {
+      "name": "Baroque Chalk Soft Blue", 
+      "code": "#AECCCB"
+    }, 
+    {
+      "name": "be Supernormal blue", 
+      "code": "#27BFF1"
+    }, 
+    {
+      "name": "Blue Black Crayfish", 
+      "code": "#52593B"
+    }, 
+    {
+      "name": "Blue Magenta Violet", 
+      "code": "#553592"
+    }, 
+    {
+      "name": "Blue With A Hint Of Purple", 
+      "code": "#533CC6"
+    }, 
+    {
+      "name": "Blue Yonder", 
+      "code": "#5072A7"
+    }, 
+    {
+      "name": "Blue Zodiac", 
+      "code": "#13264D"
+    }, 
+    {
+      "name": "Bluey Green", 
+      "code": "#2BB179"
+    }, 
+    {
+      "name": "Bluetiful", 
+      "code": "#3C69E7"
+    }, 
+    {
+      "name": "Children’s Soft Blue", 
+      "code": "#A1CED7"
+    }, 
+    {
+      "name": "Clinical Soft Blue", 
+      "code": "#B2CFD3"
+    }, 
+    {
+      "name": "Dark Blue Lapis Lazuli", 
+      "code": "#1B294B"
+    }, 
+    {
+      "name": "Ebullient Blue", 
+      "code": "#36529A"
+    }, 
+    {
+      "name": "Fuchsia Blue", 
+      "code": "#7A58C1"
+    }, 
+    {
+      "name": "Green Meets Blue", 
+      "code": "#455B58"
+    }, 
+    {
+      "name": "Greenblue", 
+      "code": "#23C48B"
+    }, 
+    {
+      "name": "Greeny Blue", 
+      "code": "#42B395"
+    }, 
+    {
+      "name": "Half Duck Egg Blue", 
+      "code": "#C6CCCA"
+    }, 
+    {
+      "name": "Half Periglacial Blue", 
+      "code": "#BFC8C4"
+    }, 
+    {
+      "name": "Jahangir Blue", 
+      "code": "#042592"
+    }, 
+    {
+      "name": "Lilac Scent Soft Blue", 
+      "code": "#9EABD0"
+    }, 
+    {
+      "name": "Luminous Vivid Phthalo Blue", 
+      "code": "#0020FF"
+    }, 
+    {
+      "name": "Navy Blue Bellflower", 
+      "code": "#191F45"
+    },
+    {
+      "name": "Non Photo Blue", 
+      "code": "#A4DDED"
+    },
+    {
+      "name": "Penn Blue", 
+      "code": "#011F5B"
+    },
+    {
+      "name": "Philippine Blue", 
+      "code": "#0038A7"
+    },
+    {
+      "name": "Purpleish Blue", 
+      "code": "#6140EF"
+    },
+    {
+      "name": "Primary Blue", 
+      "code": "#0804F9"
+    },
+    {
+      "name": "Purplish Blue", 
+      "code": "#601EF9"
+    },
+    {
+      "name": "Regent St Blue", 
+      "code": "#A0CDD9"
+    },
+    {
+      "name": "Redemption Blue", 
+      "code": "#232545"
+    },
+    {
+      "name": "Ruddy Blue", 
+      "code": "#76ABDF"
+    },
+    {
+      "name": "Something Blue", 
+      "code": "#68ADD0"
+    },
+    {
+      "name": "Strong Cornflower Blue", 
+      "code": "#0069A8"
+    },
+    {
+      "name": "Ugly Blue", 
+      "code": "#31668A"
+    },
+    {
+      "name": "Violets Are Blue", 
+      "code": "#8366F4"
+    }
+  ]
+}

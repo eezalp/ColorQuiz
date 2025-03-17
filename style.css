@@ -88,28 +88,6 @@ body{
   margin: 0px;
 }
 
-.titleBar{
-  background-color: rgb(10, 10, 10);
-  width: 100%;
-  height: 13%;
-  top: 0px;
-
-  align-items: center;
-}
-.title{
-  background-image: linear-gradient(90deg, red, blue, red, blue, red, blue, red, blue, red, blue);
-  /* filter: drop-shadow(-2px -2px red) drop-shadow(2px 2px green) drop-shadow(2px -2px blue) drop-shadow(-2px 2px yellow); */
-  color: transparent;
-  background-clip: text;
-
-  /* mix-blend-mode:exclusion; */
-
-  font-size: 100px;
-
-  padding-top: 0;
-  margin-top: 0;
-}
-
 .spacingBox{
   margin-left: max(.75vw, .75vh);
   margin-right: max(.75vw, .75vh);
@@ -445,18 +423,24 @@ a{
 
 
 .listDisplay{
+  height: 60%;
   color: white;
   font-size: 20px;
   text-align: center;
   padding-top: 4%;
+
+  overflow-y: scroll;
+
+  scrollbar-width: none;
 }
 .selector{
-  width: 50%;
+  width: 80%;
   height: 40%;
   background-color: rgb(10, 10, 10);
 
   padding-bottom: 0px;
   border-radius: 15px;
+  
 }
 .listButtons{
   background-color: rgb(80, 80, 80);
@@ -464,8 +448,12 @@ a{
   width: 100%;
   height: 20%;
   top: 20%;
+  
+  padding: 0;
+  margin: 0;
 
   flex-direction: row;
+  gap: 5px;
   border-radius: 15px 15px 0 0;
 }
 .listButton{
@@ -480,7 +468,7 @@ a{
 
   border-radius: 15px 15px 0 0;
 
-  margin-right: 5px;
+  margin: 0;
 
   flex-direction: row;
 

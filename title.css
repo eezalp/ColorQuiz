@@ -1,0 +1,42 @@
+.titleLetter{
+  background-color: transparent;
+  background-clip: text;
+
+  padding: 0px;
+  font-size: 100px;
+
+  color: white;
+
+  transition: .2s color, .6s transform;
+
+  display: inline-block;
+
+  transform-origin: center;
+}
+.titleLetter:hover{
+  color: transparent;
+  transform: scale(1.4);
+}
+
+.titleBar{
+  background-color: rgb(10, 10, 10);
+  width: 100%;
+  height: 15%;
+  top: 0px;
+
+  align-items: center;
+
+  display: flex;
+  flex-direction: column;
+}
+.title{
+  /* background-image: linear-gradient(90deg, red, blue, red, blue, red, blue, red, blue, red, blue); */
+  /* filter: drop-shadow(-2px -2px red) drop-shadow(2px 2px green) drop-shadow(2px -2px blue) drop-shadow(-2px 2px yellow); */
+
+  /* mix-blend-mode:exclusion; */
+
+  font-size: 0;
+
+  padding-top: 0;
+  margin-top: 0;
+}
